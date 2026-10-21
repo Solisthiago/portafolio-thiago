@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="es" class="no-js" data-acento="violeta" data-fondo="nombre">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dirección de arte · Santiago Solís</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="fonts/archivo-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/mr-dafoe-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');try{var a=localStorage.getItem('acento');if(a)document.documentElement.dataset.acento=a;var f=localStorage.getItem('fondo');if(f)document.documentElement.dataset.fondo=f}catch(e){}</script>
+<style>
+@font-face{font-family:"Archivo";src:url(fonts/archivo-var-latin.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"Mr Dafoe";src:url(fonts/mr-dafoe-latin.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Monsieur La Doulaise";src:url(fonts/monsieur-la-doulaise-latin.woff2) format("woff2");font-weight:400;font-display:swap}
+
+:root{
+  /* Color: tu paleta Evergreen + Almond */
+  --ink:#043222;          /* Evergreen Shadow: textos, botón, franjas */
+  --ink-deep:#021A12;     /* Evergreen más profundo: pie de página (derivado) */
+  --ink-2:#1E5A40;        /* verde medio: la S tono sobre tono (derivado) */
+  --bg:#F6E9D9;           /* Almond Cream */
+  --surface:#FBF4EA;
+  --line:#E2D2BD;
+  --muted:#4F5E55;
+  /* Acento: se prueba con el selector (violeta, lavanda o solo verde) */
+  --acc:#6A2CF5;          /* sobre crema */
+  --acc-dark:#A98BFF;     /* sobre verde */
+  --acc-ink:#FFFFFF;      /* letra sobre el acento */
+  --cta:var(--ink); --cta-ink:var(--bg);
+  --f-display:"Archivo",system-ui,sans-serif;
+  --f-script:"Mr Dafoe","Brush Script MT",cursive;
+  --r-lg:6px; --r-sm:3px; --r-pill:999px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-io:cubic-bezier(.76,0,.24,1);
+  --ease-pop:cubic-bezier(.34,1.4,.64,1);
+  --dur:1.05s; --dist:48px; --t-hover:.4s;
+  --gutter:clamp(16px,4.4vw,56px);
+  --maxw:1320px;
+}
+[data-acento="verde"]{--acc:var(--ink);--acc-dark:var(--bg);--acc-ink:var(--bg)}
+[data-acento="lavanda"]{--acc:#8C6FE6;--acc-dark:#B7A3F2;--acc-ink:var(--ink)}
+
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font-family:var(--f-display);font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:clip}
+.mask{display:block;background:currentColor;-webkit-mask:var(--src) center/contain no-repeat;mask:var(--src) center/contain no-repeat}
+.s-mono{--src:url(img/s-monograma.webp);aspect-ratio:830/1068}
+
+.aviso{background:var(--ink-deep);color:var(--bg);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:7px 12px;white-space:nowrap}
+
+/* ===== Navegación ===== */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px var(--gutter);max-width:var(--maxw);margin:0 auto;position:relative;z-index:5}
+.nav__logo{display:flex;align-items:center;gap:10px;text-decoration:none;line-height:1}
+.nav__logo img{width:38px;height:auto}
+.nav__nombre{font-weight:900;font-stretch:72%;text-transform:uppercase;font-size:1.15rem;line-height:.92;letter-spacing:.01em;max-width:6em}
+.nav__der{display:flex;align-items:center;gap:14px}
+.lang{font-size:.78rem;font-weight:700;letter-spacing:.06em;white-space:nowrap}
+.lang b{border-bottom:2px solid var(--acc)}
+
+/* ===== Botón ===== */
+.btn{--h:52px;display:inline-flex;align-items:center;gap:12px;min-height:var(--h);padding:0 22px 0 24px;border-radius:var(--r-pill);background:var(--cta);color:var(--cta-ink);
+  font-weight:800;font-stretch:88%;font-size:1rem;letter-spacing:.02em;text-decoration:none;text-transform:uppercase;border:2px solid var(--cta);
+  transition:background var(--t-hover) var(--ease),color var(--t-hover) var(--ease),border-color var(--t-hover) var(--ease),scale .2s var(--ease)}
+.btn__rombo{width:11px;height:11px;background:var(--acc-dark);rotate:45deg;transition:rotate var(--t-hover) var(--ease-pop),background var(--t-hover)}
+@media (hover:hover){.btn:hover{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}.btn:hover .btn__rombo{rotate:225deg;background:currentColor}}
+.btn:active{scale:.96}
+.btn--sm{--h:44px;padding:0 16px 0 18px;font-size:.82rem;gap:9px}
+.btn--sm .btn__rombo{width:8px;height:8px}
+.link{font-weight:700;text-decoration:none;border-bottom:2px solid currentColor;padding:12px 0 2px;font-size:.95rem}
+
+/* ===== Portada ===== */
+.portada{position:relative;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1fr}
+.escena{position:relative;height:clamp(280px,76vw,460px);margin:0 calc(var(--gutter)*-1);overflow:hidden}
+/* Fondo A: afiche con tu nombre gigante */
+.afiche{position:absolute;inset:0;background:var(--ink);overflow:hidden;container-type:size}
+.afiche::after{content:"";position:absolute;inset:0;opacity:.16;mix-blend-mode:soft-light;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.afiche__nombre{position:absolute;left:3%;right:3%;bottom:30%;display:flex;justify-content:space-between;align-items:flex-end;clip-path:inset(-300% -5% 0 -5%)}
+.afiche__nombre span{display:block;font-weight:900;font-stretch:62%;font-size:min(31cqw,44cqh);line-height:.73;color:var(--bg);transform-origin:50% 100%;scale:1 2.05}
+.afiche__piso{position:absolute;left:-30%;right:-30%;top:70%;bottom:0;overflow:hidden;perspective:220px;perspective-origin:50% 0;
+  -webkit-mask-image:linear-gradient(#000 20%,transparent 100%);mask-image:linear-gradient(#000 20%,transparent 100%)}
+.afiche__piso span{display:block;text-align:center;font-weight:900;font-stretch:62%;font-size:min(42cqw,62cqh);line-height:.75;color:var(--bg);opacity:.92;
+  transform:rotateX(52deg);transform-origin:50% 0}
+/* Fondo B: marco */
+.marco{display:none;position:absolute;left:10%;right:10%;top:3%;bottom:14%;border:clamp(7px,2.2vw,12px) solid var(--ink);background:var(--ink-2)}
+.marco__barra,.marco__pie{position:absolute;left:-2px;right:-2px;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:space-between;padding:0 4%}
+.marco__barra{top:-2px;height:20%}
+.marco__barra img{height:72%;width:auto}
+.marco__barra b{font-family:var(--f-script);font-weight:400;font-size:clamp(2rem,10vw,4rem);line-height:1;color:var(--bg)}
+.marco__barra small,.marco__pie{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;line-height:1.1;text-align:right}
+.marco__pie{bottom:-2px;height:9%;justify-content:center}
+[data-fondo="marco"] .afiche{display:none}
+[data-fondo="marco"] .marco{display:block}
+[data-fondo="marco"] .escena__iso{display:none}
+[data-fondo="marco"] .escena__figura{bottom:1%;height:80%}
+[data-fondo="marco"] .escena__sombra{display:none}
+.escena__figura{position:absolute;bottom:5%;left:50%;translate:-46% 0;height:80%;aspect-ratio:849/1120}
+.escena__foto{position:relative;width:100%;height:100%;max-width:none;filter:saturate(.92) contrast(1.04)}
+/* Sombra dibujada: una suave en el piso y otras de contacto bajo los tenis y las patas de la silla */
+.escena__sombra{position:absolute;left:-6%;right:-6%;top:78%;height:30%;pointer-events:none;
+  background:
+    radial-gradient(10% 4.5% at 18% 36%,rgba(0,0,0,.78),transparent),
+    radial-gradient(11% 4.5% at 41% 70%,rgba(0,0,0,.78),transparent),
+    radial-gradient(5% 3% at 86% 23%,rgba(0,0,0,.7),transparent),
+    radial-gradient(6% 3% at 63% 36%,rgba(0,0,0,.55),transparent),
+    radial-gradient(50% 32% at 50% 44%,rgba(0,0,0,.5),transparent)}
+.escena__iso{position:absolute;width:clamp(52px,13vw,100px);right:3%;top:3%;rotate:9deg;filter:drop-shadow(0 6px 10px rgba(2,26,18,.35))}
+.texto{position:relative;z-index:2;padding-top:14px}
+.ceja{display:flex;align-items:center;gap:8px;margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.rombo{display:inline-block;width:8px;height:8px;background:var(--acc);rotate:45deg;flex:none}
+.titulo-caja{position:relative;padding-bottom:.56em;font-size:clamp(4rem,19.5vw,11.5rem)}
+.titular{margin:0;font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:1em;line-height:.86;letter-spacing:-.01em}
+.titular .l{display:block;overflow:hidden;padding:.06em .12em .04em 0;margin:-.06em -.12em -.04em 0}
+.titular .l-in{display:block}
+.script{position:absolute;right:-1%;bottom:.04em;margin:0;font-family:var(--f-script);font-weight:400;letter-spacing:0;
+  font-size:1.06em;line-height:1;color:var(--acc);rotate:-6deg;transform-origin:0% 100%;white-space:nowrap;pointer-events:none}
+.micro{margin:8px 0 0;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.35;max-width:36ch;text-align:justify}
+.lead{max-width:34ch;margin:12px 0 0;font-size:1rem;line-height:1.5}
+.acciones{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:16px}
+.rombo-viajero{position:absolute;width:11px;height:11px;background:var(--acc-dark);rotate:45deg;z-index:6;pointer-events:none;opacity:0;left:0;top:0}
+
+.disciplinas{list-style:none;margin:40px calc(var(--gutter)*-1) 0;padding:22px var(--gutter);background:var(--ink);color:var(--bg);display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+.disciplinas li{font-weight:600;font-size:.92rem;line-height:1.25}
+.disciplinas small{display:flex;align-items:center;gap:6px;color:var(--acc-dark);font-weight:800;letter-spacing:.08em;font-size:.72rem;margin-bottom:4px}
+.disciplinas .rombo{background:var(--acc-dark)}
+
+.controles{max-width:var(--maxw);margin:0 auto;padding:18px var(--gutter) 0;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.repetir,.chip{font:inherit;font-weight:700;font-size:.9rem;background:none;border:2px solid var(--ink);color:var(--ink);border-radius:var(--r-pill);min-height:44px;padding:0 18px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.controles [data-aviso-rm]{font-size:.85rem;color:var(--muted)}
+
+@media (min-width:900px){
+  .portada{grid-template-columns:repeat(12,1fr);column-gap:20px;align-items:end;min-height:min(calc(100svh - 110px),760px)}
+  .escena{grid-column:7/13;grid-row:1;height:100%;min-height:560px;margin:0 calc(var(--gutter)*-1) 0 -20px}
+  .afiche__nombre span{scale:1 2.5;font-size:min(31cqw,36cqh)}
+  .afiche__nombre{bottom:30%}
+  .escena__figura{bottom:6%;height:70%}
+  .escena__iso{width:84px}
+  .afiche__piso{top:70%}
+  .texto{grid-column:1/7;grid-row:1;margin:0 0 54px;align-self:end}
+  .titulo-caja{font-size:clamp(5.2rem,8.4vw,9.4rem)}
+  .script{right:6%}
+  .disciplinas{grid-column:1/-1;grid-template-columns:repeat(4,1fr);margin:0 calc(var(--gutter)*-1);padding:26px var(--gutter)}
+}
+
+.js .titular .l-in{transform:translateY(118%);animation:rescateL 0s 5s forwards}
+.js [data-pieza]{visibility:hidden;animation:rescate 0s 5s forwards}
+@keyframes rescate{to{visibility:visible}}
+@keyframes rescateL{to{transform:none}}
+
+/* ===== Hoja ===== */
+.hoja{max-width:var(--maxw);margin:0 auto;padding:64px var(--gutter) 40px}
+.bloque{padding:44px 0;border-top:2px solid var(--ink)}
+.bloque__num{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.1em;font-size:.78rem;text-transform:uppercase;margin:0 0 6px}
+.h2{margin:0 0 22px;font-weight:900;font-stretch:70%;text-transform:uppercase;font-size:clamp(2.4rem,9vw,4.6rem);line-height:.95}
+.linea-mask{padding:.12em .1em .12em 0;margin:-.12em -.1em -.12em 0}
+.nota{color:var(--muted);max-width:52ch;margin:0 0 22px}
+.paleta{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.color{border-radius:var(--r-lg);padding:14px;min-height:120px;display:flex;flex-direction:column;justify-content:flex-end;font-size:.88rem;line-height:1.35}
+.color b{display:block;font-size:1rem}
+.color code{font-family:inherit;font-weight:700;font-size:.8rem;letter-spacing:.06em;opacity:.85}
+.color--borde{border:1.5px solid var(--line)}
+.color--acc{background:var(--acc);color:var(--acc-ink)}
+.prueba{margin-top:22px;padding:18px;border-radius:var(--r-lg);background:var(--surface);border:1.5px solid var(--line)}
+.prueba p{margin:0 0 12px;font-weight:700}
+.prueba__chips{display:flex;gap:8px;flex-wrap:wrap}
+.cursivas{display:grid;gap:14px}
+.cursiva{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:18px 18px 14px;overflow:hidden}
+.cursiva__muestra{position:relative;font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(3rem,13vw,5.4rem);line-height:.88;padding-bottom:.45em;margin-bottom:6px}
+.cursiva__muestra span{position:absolute;right:4%;bottom:0;font-weight:400;text-transform:none;color:var(--acc);rotate:-7deg;font-size:1.05em;white-space:nowrap}
+.cursiva small{display:block;font-size:.85rem;color:var(--muted)}
+.etiqueta-tipo{display:block;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.elementos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.el{background:var(--surface);border-radius:var(--r-lg);padding:14px;display:flex;flex-direction:column;gap:12px;border:1.5px solid var(--line)}
+.el__dibujo{height:110px;display:grid;place-items:center;position:relative;overflow:hidden;border-radius:var(--r-sm)}
+.el p{margin:0;font-size:.88rem;line-height:1.4}
+.el p b{display:block;font-size:.95rem}
+.el--ancho{grid-column:1/-1}
+.mini-nombre{display:flex;gap:2px;clip-path:inset(-200% 0 0 0)}.mini-nombre i{font-style:normal;font-weight:900;font-stretch:62%;font-size:3.4rem;line-height:.73;color:var(--bg);scale:1 1.4;transform-origin:50% 100%;display:block}
+.rombos{display:flex;gap:14px;align-items:center}
+.rombos i{width:16px;height:16px;background:var(--ink);rotate:45deg;display:block}
+.rombos i:nth-child(2){background:var(--acc)}
+.pildora{display:inline-flex;border:1.5px solid var(--ink);border-radius:var(--r-pill);padding:5px 12px;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+.pildoras{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.patron-muestra{position:absolute;inset:0;background:var(--ink);-webkit-mask:url(img/patron.webp) 0 0/260px auto repeat;mask:url(img/patron.webp) 0 0/260px auto repeat;opacity:.55}
+.iso-muestra{width:86px;rotate:-7deg}
+.el .micro--muestra{max-width:22ch;font-size:.62rem;margin:0}
+.ver-mov{font:inherit;font-size:.85rem;font-weight:700;background:none;border:0;padding:10px 0;min-height:44px;text-align:left;cursor:pointer;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.boton-y-tarjeta{display:grid;gap:28px}
+.tarjeta{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;display:block;border:1.5px solid var(--line);max-width:520px}
+.tarjeta__img{overflow:hidden;aspect-ratio:4/3;position:relative}
+.tarjeta__img img{width:100%;height:100%;object-fit:cover;transition:scale .9s var(--ease)}
+.tarjeta__tag{position:absolute;left:12px;top:12px;background:var(--bg)}
+.tarjeta__cuerpo{padding:16px 18px 18px;display:grid;grid-template-columns:auto 1fr auto;gap:2px 12px;align-items:baseline}
+.tarjeta__n{font-weight:900;font-stretch:62%;font-size:2.4rem;line-height:1;grid-row:1/3}
+.tarjeta h3{margin:0;font-weight:900;font-stretch:75%;text-transform:uppercase;font-size:1.6rem;line-height:1}
+.tarjeta__meta{grid-column:2;font-size:.85rem;color:var(--muted)}
+.tarjeta__ir{grid-row:1/3;grid-column:3;align-self:center;width:44px;height:44px;border-radius:50%;background:var(--ink);display:grid;place-items:center;transition:background var(--t-hover) var(--ease)}
+.tarjeta__ir i{width:9px;height:9px;background:var(--acc-dark);rotate:45deg;transition:rotate var(--t-hover) var(--ease-pop),background var(--t-hover)}
+@media (hover:hover){.tarjeta:hover .tarjeta__img img{scale:1.045}.tarjeta:hover .tarjeta__ir{background:var(--acc)}.tarjeta:hover .tarjeta__ir i{background:var(--acc-ink);rotate:225deg}}
+.pie{padding:28px var(--gutter) 40px;text-align:center;font-size:.85rem;color:var(--muted)}
+@media (min-width:900px){
+  .paleta{grid-template-columns:repeat(5,1fr)}
+  .cursivas{grid-template-columns:1fr 1fr}
+  .elementos{grid-template-columns:repeat(4,1fr)}
+  .el--ancho{grid-column:span 2}
+  .boton-y-tarjeta{grid-template-columns:1fr 1fr;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .js .titular .l-in{transform:none}
+  .js [data-pieza]{visibility:visible}
+}
+</style>
+</head>
+<body>
+<div class="aviso">Hoja de muestra · no se publica</div>
+
+<!-- ===== INICIO Portada ===== -->
+<header class="nav" data-pieza>
+  <a class="nav__logo" href="#" aria-label="Santiago Solís, inicio"><img src="img/isotipo.webp" width="500" height="606" alt=""><span class="nav__nombre">Santiago Solís</span></a>
+  <div class="nav__der">
+    <span class="lang" aria-label="Idioma"><b>ES</b>·EN</span>
+    <a class="btn btn--sm" href="https://wa.me/573005198202?text=Hola%20Thiago%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20de%20un%20proyecto">Escríbeme <span class="btn__rombo"></span></a>
+  </div>
+</header>
+
+<section class="portada" data-portada>
+  <div class="escena" aria-hidden="true">
+    <div class="afiche" data-pieza data-afiche>
+      <div class="afiche__nombre" data-nombre><span>T</span><span>H</span><span>I</span><span>A</span><span>G</span><span>O</span></div>
+      <div class="afiche__piso" data-piso><span>SOLÍS</span></div>
+    </div>
+    <div class="marco" data-pieza data-marco>
+      <div class="marco__barra"><img src="img/isotipo.webp" width="500" height="606" alt="" data-rombo-origen><b>Thiago</b><small>Medellín<br>2026</small></div>
+    </div>
+    <div class="escena__figura" data-pieza data-hero-img>
+      <span class="escena__sombra" aria-hidden="true"></span>
+      <picture>
+        <source media="(min-width:700px)" srcset="img/thiago-silla-849.webp">
+        <img class="escena__foto" src="img/thiago-silla-640.webp" width="849" height="1120" alt="" fetchpriority="high">
+      </picture>
+    </div>
+    <img class="escena__iso" data-pieza data-iso data-rombo-origen src="img/isotipo.webp" width="500" height="606" alt="">
+  </div>
+
+  <div class="texto">
+    <p class="ceja" data-pieza><span class="rombo"></span>Diseñador gráfico · Medellín</p>
+    <div class="titulo-caja">
+      <h1 class="titular">
+        <span class="l"><span class="l-in">Marcas</span></span>
+        <span class="l"><span class="l-in">que se leen</span></span>
+        <span class="oculto">de lejos</span>
+      </h1>
+      <p class="script" data-pieza data-script aria-hidden="true">de lejos</p>
+    </div>
+    <p class="micro" data-pieza>Portafolio 2026 → identidad, editorial, motion y web. Medellín, Colombia.</p>
+    <p class="lead" data-pieza>Soy Santiago Solís, Thiago. Diseño identidades, editorial, motion y webs a medida para marcas con carácter.</p>
+    <div class="acciones" data-pieza>
+      <a class="btn" data-boton href="https://wa.me/573005198202?text=Hola%20Thiago%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20de%20un%20proyecto">Escríbeme <span class="btn__rombo" data-boton-rombo></span></a>
+      <a class="link" href="mailto:santiagomezsolis@gmail.com?subject=Proyecto%20desde%20tu%20portafolio">o por correo</a>
+    </div>
+  </div>
+
+  <ol class="disciplinas" data-pieza>
+    <li><small><span class="rombo"></span>01</small>Identidad de marca</li>
+    <li><small><span class="rombo"></span>02</small>Editorial e infografía</li>
+    <li><small><span class="rombo"></span>03</small>Motion graphics</li>
+    <li><small><span class="rombo"></span>04</small>Web a medida</li>
+  </ol>
+  <span class="rombo-viajero" aria-hidden="true"></span>
+</section>
+<!-- ===== FIN Portada ===== -->
+
+<div class="controles">
+  <button type="button" class="repetir" data-ver-de-nuevo>Ver de nuevo</button>
+  <span class="prueba__chips" role="group" aria-label="Fondo detrás de tu foto">
+    <button type="button" class="chip" data-fondo-btn="nombre" aria-pressed="true">Fondo: tu nombre</button>
+    <button type="button" class="chip" data-fondo-btn="marco" aria-pressed="false">Fondo: marco</button>
+  </span>
+  <span data-aviso-rm hidden>Tienes activado "Reducir movimiento": aquí ves una versión sin desplazamientos. Apágalo para ver la animación completa.</span>
+</div>
+
+<main class="hoja">
+  <section class="bloque">
+    <p class="bloque__num"><span class="rombo"></span>01 · Tus colores</p>
+    <h2 class="h2" data-split>Evergreen y almendra</h2>
+    <p class="nota" data-reveal>Tu paleta manda: verde profundo y crema. El morado queda como un acento pequeño (la palabra en cursiva, los rombos y el botón al pasar el mouse) y lo puedes probar aquí abajo.</p>
+    <div class="paleta" data-reveal>
+      <div class="color" style="background:#043222;color:#F6E9D9"><b>Evergreen</b>Textos, botón y franjas<code>#043222</code></div>
+      <div class="color color--borde" style="background:#F6E9D9"><b>Almond Cream</b>Fondo de todo el sitio<code>#F6E9D9</code></div>
+      <div class="color" style="background:#1E5A40;color:#F6E9D9"><b>Verde medio</b>Tu S detrás de ti, tono sobre tono<code>#1E5A40</code></div>
+      <div class="color" style="background:#021A12;color:#F6E9D9"><b>Evergreen noche</b>Pie de página<code>#021A12</code></div>
+      <div class="color color--acc"><b>Acento</b>Cursiva, rombos y hover<code data-acc-hex>#6A2CF5</code></div>
+    </div>
+    <div class="prueba" data-reveal>
+      <p>Prueba el acento en toda la página:</p>
+      <div class="prueba__chips" role="group" aria-label="Color de acento">
+        <button type="button" class="chip" data-acento-btn="violeta" aria-pressed="true">Violeta eléctrico</button>
+        <button type="button" class="chip" data-acento-btn="lavanda" aria-pressed="false">Lavanda</button>
+        <button type="button" class="chip" data-acento-btn="verde" aria-pressed="false">Solo verde</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <p class="bloque__num"><span class="rombo"></span>02 · Tus letras</p>
+    <h2 class="h2" data-split>Bloque y firma</h2>
+    <p class="nota" data-reveal>Como en tus referencias: una letra de bloque, condensada y pesada, y una cursiva que la cruza como una firma. Elige la cursiva:</p>
+    <div class="cursivas">
+      <div class="cursiva" data-reveal>
+        <div class="cursiva__muestra">Diseño con<span style="font-family:'Mr Dafoe',cursive">carácter</span></div>
+        <small><b>A · Pincel (la de la portada).</b> Suelta y con calle, como "Forward" y "Enough".</small>
+      </div>
+      <div class="cursiva" data-reveal>
+        <div class="cursiva__muestra">Diseño con<span style="font-family:'Monsieur La Doulaise',cursive;font-size:1.25em">carácter</span></div>
+        <small><b>B · Caligráfica.</b> Más fina y elegante, como "Design archive" y "Money on my mind".</small>
+      </div>
+    </div>
+    <span class="etiqueta-tipo">Título de sección</span>
+    <p class="h2" style="margin-bottom:0">Trabajo seleccionado</p>
+    <span class="etiqueta-tipo">Texto</span>
+    <p style="max-width:56ch">En PhoneDoctors llevé el rebranding de los 10 años: el sistema de logo, la pieza de lanzamiento en motion, el sitio web y una línea de merch. Un departamento creativo de una sola persona.</p>
+  </section>
+
+  <section class="bloque">
+    <p class="bloque__num"><span class="rombo"></span>03 · Lo que la hace tuya</p>
+    <h2 class="h2" data-split>Seis piezas de tu marca</h2>
+    <div class="elementos">
+      <div class="el el--ancho" data-reveal>
+        <div class="el__dibujo"><img class="iso-muestra" data-mov-iso src="img/isotipo.webp" width="500" height="606" alt=""></div>
+        <p><b>Tu isotipo</b>Firma el menú, se pega junto a ti en la portada y cierra el sitio.</p>
+        <button type="button" class="ver-mov" data-ver-mov="iso">Ver cómo se mueve</button>
+      </div>
+      <div class="el" data-reveal>
+        <div class="el__dibujo"><span class="rombos"><i></i><i></i><i></i></span></div>
+        <p><b>El rombo</b>Numera, separa y es el ícono de tus botones.</p>
+      </div>
+      <div class="el" data-reveal>
+        <div class="el__dibujo" style="background:var(--ink)"><span class="mini-nombre" data-mov-nombre><i>T</i><i>H</i><i>I</i><i>A</i><i>G</i><i>O</i></span></div>
+        <p><b>Tu nombre de afiche</b>THIAGO gigante detrás de ti y SOLÍS en el piso. Sube letra por letra.</p>
+        <button type="button" class="ver-mov" data-ver-mov="nombre">Ver cómo se mueve</button>
+      </div>
+      <div class="el" data-reveal>
+        <div class="el__dibujo"><p class="micro micro--muestra">Portafolio 2026 → identidad, editorial, motion y web. Medellín, Colombia.</p></div>
+        <p><b>El microtexto</b>Bloques chiquitos y justificados, como en tus referencias.</p>
+      </div>
+      <div class="el" data-reveal>
+        <div class="el__dibujo"><span class="pildoras"><span class="pildora">Branding</span><span class="pildora">Motion</span><span class="pildora">Editorial</span></span></div>
+        <p><b>La píldora</b>Filtra tus proyectos por disciplina.</p>
+      </div>
+      <div class="el" data-reveal>
+        <div class="el__dibujo"><span class="patron-muestra"></span></div>
+        <p><b>Tu patrón</b>Tus herramientas, muy tenues, en la sección sobre ti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="trabajo">
+    <p class="bloque__num"><span class="rombo"></span>04 · Botón y tarjeta</p>
+    <h2 class="h2" data-split>Así se toca</h2>
+    <div class="boton-y-tarjeta">
+      <div data-reveal>
+        <p class="nota">Un solo botón: "Escríbeme", que abre WhatsApp. Al lado, siempre la opción de correo. Al pasar el mouse el botón toma el acento y su rombo gira.</p>
+        <a class="btn" href="https://wa.me/573005198202?text=Hola%20Thiago%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20de%20un%20proyecto">Escríbeme <span class="btn__rombo"></span></a>
+      </div>
+      <a class="tarjeta" href="#trabajo" data-reveal>
+        <div class="tarjeta__img"><img src="img/caso-phd-900.webp" width="900" height="675" alt="Sistema de logo de PhoneDoctors en sus versiones" loading="lazy"><span class="pildora tarjeta__tag">Rebranding · 2025–2026</span></div>
+        <div class="tarjeta__cuerpo">
+          <span class="tarjeta__n">01</span>
+          <h3>PhoneDoctors</h3>
+          <span class="tarjeta__meta">Identidad, motion, web y merch</span>
+          <span class="tarjeta__ir" aria-hidden="true"><i></i></span>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+<p class="pie">Hoja de muestra para aprobar la dirección de arte. El sitio final llevará español e inglés.</p>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/SplitText.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="js/firma.js?v=20261021c" defer></script>
+</body>
+</html>

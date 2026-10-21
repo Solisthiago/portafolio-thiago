@@ -1,0 +1,546 @@
+{
+  "_como_usar": "Cada proyecto es una entrada, con su versión en inglés dentro de \"en\" (resumen, texto, rol, equipo y alts, uno por imagen y en el mismo orden). Las imágenes van en img/proyectos/ con el nombre <clave>-<n>-1200.webp y <clave>-<n>-640.webp. Después de editar, corre: python3 herramientas/generar-proyectos.py",
+  "destacados": [
+    "phonedoctors",
+    "portatiles-consolas",
+    "revista-rap",
+    "parques-altamar"
+  ],
+  "proyectos": [
+    {
+      "clave": "phd",
+      "slug": "phonedoctors",
+      "nombre": "PhoneDoctors",
+      "tipo": "Profesional",
+      "anio": "2025–2026",
+      "disciplinas": [
+        "Branding",
+        "Motion",
+        "Web",
+        "Editorial"
+      ],
+      "resumen": "Rebranding de los 10 años, motion, web y merch",
+      "texto": [
+        "PhoneDoctors es un centro de reparación de dispositivos Apple en Medellín. Para su 10.º aniversario necesitaba una imagen que contara quién es hoy.",
+        "Trabajo ahí como el departamento creativo de una sola persona: renové la identidad y armé el sistema de logotipo, consolidé el tagline «Los tesos en la manzana», hice la pieza de lanzamiento en motion, rediseñé el sitio web y diseñé piezas editoriales y una línea de merch."
+      ],
+      "rol": "Diseño gráfico, motion, web y dirección creativa",
+      "equipo": "Diseño · Santiago Solís",
+      "herramientas": "Illustrator, Photoshop, After Effects, InDesign",
+      "imagenes": [
+        [
+          "1",
+          "Sistema de logotipo de PhoneDoctors en sus versiones"
+        ],
+        [
+          "7",
+          "Logotipo de PhoneDoctors"
+        ],
+        [
+          "2",
+          "Cuadro de la pieza de lanzamiento en motion"
+        ],
+        [
+          "3",
+          "Rediseño del sitio web en computador y celular"
+        ],
+        [
+          "4",
+          "Carrusel de Instagram sobre el iPhone 17"
+        ],
+        [
+          "5",
+          "Serie de cuadros sobre la evolución del iPhone"
+        ],
+        [
+          "6",
+          "Hoodie, gorra y jersey con el patrón de la marca"
+        ]
+      ],
+      "en": {
+        "resumen": "10th-anniversary rebrand, motion, web and merch",
+        "texto": [
+          "PhoneDoctors is an Apple device repair shop in Medellín. For its 10th anniversary it needed an identity that told who it is today.",
+          "I work there as a one-person creative department: I renewed the identity and built the logo system, consolidated the tagline «Los tesos en la manzana», made the launch piece in motion, redesigned the website and designed editorial pieces and a merch line."
+        ],
+        "rol": "Graphic design, motion, web and creative direction",
+        "equipo": "Design · Santiago Solís",
+        "alts": [
+          "PhoneDoctors logo system in its versions",
+          "PhoneDoctors logo",
+          "Still from the motion launch piece",
+          "Website redesign on desktop and mobile",
+          "Instagram carousel about the iPhone 17",
+          "Series of prints about the evolution of the iPhone",
+          "Hoodie, cap and jersey with the brand pattern"
+        ]
+      }
+    },
+    {
+      "clave": "pyc",
+      "slug": "portatiles-consolas",
+      "nombre": "Portátiles & Consolas",
+      "tipo": "Freelance",
+      "anio": "2026",
+      "disciplinas": [
+        "Web"
+      ],
+      "resumen": "Tienda online de repuestos con pedidos por WhatsApp",
+      "texto": [
+        "Tienda de repuestos para portátiles en el C. C. Carrusel del Éxito, Medellín. Su sitio estaba hecho con un constructor visual en un entorno local y la base de datos se perdió. Rescatamos las imágenes y lo reconstruí mejor.",
+        "Hice un tema de WordPress propio en código, sin constructores, y una tienda sin carrito: el cliente arma su pedido y lo envía por WhatsApp. Sumé un buscador por modelo compatible, fichas con «Compatible con», filtros, un panel «Mi pedido» y una barra fija de compra en celular. Conservé el logo y los banners del cliente y le di un motivo de circuitos que se dibuja con el scroll."
+      ],
+      "rol": "Diseño UX/UI y desarrollo",
+      "equipo": "Santiago Solís",
+      "herramientas": "WordPress, WooCommerce, HTML, CSS, JavaScript",
+      "imagenes": [
+        [
+          "1",
+          "Inicio de la tienda en computador"
+        ],
+        [
+          "2",
+          "Catálogo con filtros por categoría, marca y disponibilidad"
+        ],
+        [
+          "3",
+          "Ficha de producto con la sección «Compatible con»"
+        ],
+        [
+          "5",
+          "Inicio de la tienda en celular",
+          "390"
+        ],
+        [
+          "4",
+          "Panel «Mi pedido» que arma el mensaje de WhatsApp",
+          "390"
+        ]
+      ],
+      "en": {
+        "resumen": "Online parts store with WhatsApp orders",
+        "texto": [
+          "A laptop parts store at the Carrusel del Éxito mall in Medellín. Its site was built with a visual page builder on a local setup, and the database was lost. We rescued the images and I rebuilt it better.",
+          "I coded a custom WordPress theme, no page builders, and a cart-free store: customers build their order and send it through WhatsApp. I added search by compatible model, «Compatible with» product pages, filters, a «My order» panel and a sticky buy bar on mobile. I kept the client's logo and banners and added a circuit motif that draws itself on scroll."
+        ],
+        "rol": "UX/UI design and development",
+        "equipo": "Santiago Solís",
+        "alts": [
+          "Store homepage on desktop",
+          "Catalog with filters by category, brand and stock",
+          "Product page with the «Compatible with» section",
+          "Store homepage on mobile",
+          "«My order» panel that builds the WhatsApp message"
+        ]
+      }
+    },
+    {
+      "clave": "rap",
+      "slug": "revista-rap",
+      "nombre": "Revista R.A.P.",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Editorial"
+      ],
+      "resumen": "La nueva escena del rap de Medellín",
+      "texto": [
+        "Una revista sobre la nueva escena del rap de Medellín: Oblivion Mighty Trash, Doble Porción, Granuja, Crudo Means Raw y Luis7Lunes.",
+        "Hecha en la electiva de InDesign de la UPB."
+      ],
+      "rol": "Diseño editorial",
+      "equipo": "Santiago Solís",
+      "herramientas": "InDesign, Illustrator, Photoshop",
+      "imagenes": [
+        [
+          "1",
+          "Revista R.A.P. abierta en el artículo de Oblivion Mighty Trash"
+        ],
+        [
+          "2",
+          "Doble página de la revista"
+        ],
+        [
+          "3",
+          "Página dedicada a Granuja"
+        ],
+        [
+          "4",
+          "Página dedicada a Luis7Lunes"
+        ]
+      ],
+      "en": {
+        "resumen": "Medellín's new rap scene",
+        "texto": [
+          "A magazine about Medellín's new rap scene: Oblivion Mighty Trash, Doble Porción, Granuja, Crudo Means Raw and Luis7Lunes.",
+          "Made for the InDesign elective at UPB."
+        ],
+        "rol": "Editorial design",
+        "equipo": "Santiago Solís",
+        "alts": [
+          "R.A.P. magazine open on the Oblivion Mighty Trash feature",
+          "Magazine spread",
+          "Page about Granuja",
+          "Page about Luis7Lunes"
+        ]
+      }
+    },
+    {
+      "clave": "parques",
+      "slug": "parques-altamar",
+      "nombre": "Parqués Altamar",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Ilustración",
+        "Editorial"
+      ],
+      "resumen": "Un parqués pirata con empaque e instructivo",
+      "texto": [
+        "Un parqués de temática pirata donde fantasmas, piratas, sirenas y monstruos compiten por un tesoro. Incluye tablero, empaque e instructivo.",
+        "Proyecto de Núcleo profesional I en la UPB."
+      ],
+      "rol": "Ilustración, packaging y diseño editorial",
+      "equipo": "Isabel López, Sebastián Gil, Santiago Chavarro y Santiago Solís",
+      "herramientas": "InDesign, Illustrator, Photoshop",
+      "imagenes": [
+        [
+          "1",
+          "Tablero del parqués Altamar"
+        ],
+        [
+          "2",
+          "Empaque en cartón kraft"
+        ],
+        [
+          "3",
+          "Ilustración de las casillas seguras"
+        ],
+        [
+          "4",
+          "Ilustración del tablero en detalle"
+        ]
+      ],
+      "en": {
+        "resumen": "A pirate parcheesi with box and rulebook",
+        "texto": [
+          "A pirate-themed parcheesi (parqués) where ghosts, pirates, mermaids and monsters race for a treasure. It includes the board, packaging and a rulebook.",
+          "Professional Core I project at UPB."
+        ],
+        "rol": "Illustration, packaging and editorial design",
+        "equipo": "Isabel López, Sebastián Gil, Santiago Chavarro and Santiago Solís",
+        "alts": [
+          "Altamar parcheesi board",
+          "Kraft cardboard box",
+          "Illustration of the safe squares",
+          "Board illustration in detail"
+        ]
+      }
+    },
+    {
+      "clave": "arquey",
+      "slug": "revista-arquey",
+      "nombre": "Revista Arquey",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Editorial"
+      ],
+      "resumen": "Revista de videojuegos",
+      "texto": [
+        "Una revista de videojuegos: Nintendo (Pokémon, Zelda), los Game Awards, juegos espaciales como Doom y Halo, videojuegos y violencia, y la evolución de las consolas.",
+        "Proyecto de Núcleo profesional I en la UPB."
+      ],
+      "rol": "Diseño editorial",
+      "equipo": "Isabella Villegas, Ana Martínez, Santiago Chavarro y Santiago Solís",
+      "herramientas": "InDesign, Illustrator, Photoshop, Lightroom",
+      "imagenes": [
+        [
+          "1",
+          "Revista Arquey abierta"
+        ],
+        [
+          "2",
+          "Portada de la revista Arquey"
+        ],
+        [
+          "3",
+          "Doble página de la revista"
+        ],
+        [
+          "4",
+          "Revista Arquey en mockup"
+        ]
+      ],
+      "en": {
+        "resumen": "A video game magazine",
+        "texto": [
+          "A video game magazine: Nintendo (Pokémon, Zelda), the Game Awards, space games like Doom and Halo, video games and violence, and the evolution of consoles.",
+          "Professional Core I project at UPB."
+        ],
+        "rol": "Editorial design",
+        "equipo": "Isabella Villegas, Ana Martínez, Santiago Chavarro and Santiago Solís",
+        "alts": [
+          "Arquey magazine open",
+          "Arquey magazine cover",
+          "Magazine spread",
+          "Arquey magazine mockup"
+        ]
+      }
+    },
+    {
+      "clave": "afiches",
+      "slug": "afiches-serigrafia",
+      "nombre": "Afiches en serigrafía",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Ilustración"
+      ],
+      "resumen": "Tres afiches entre la ilustración y la tipografía",
+      "texto": [
+        "Tres afiches ilustrado-tipográficos: en uno domina la ilustración, en otro la tipografía y en el tercero las dos se integran.",
+        "Proyecto de Núcleo profesional I en la UPB."
+      ],
+      "rol": "Ilustración y tipografía",
+      "equipo": "Isabel López, Sebastián Gil, Santiago Chavarro y Santiago Solís",
+      "herramientas": "Illustrator, Photoshop, Procreate",
+      "imagenes": [
+        [
+          "1",
+          "Afiche donde domina la ilustración"
+        ],
+        [
+          "2",
+          "Afiche donde domina la tipografía"
+        ],
+        [
+          "3",
+          "Afiche que integra ilustración y tipografía"
+        ]
+      ],
+      "en": {
+        "resumen": "Three posters between illustration and type",
+        "texto": [
+          "Three illustrated-typographic posters: in one the illustration leads, in another the type, and in the third they merge.",
+          "Professional Core I project at UPB."
+        ],
+        "rol": "Illustration and typography",
+        "equipo": "Isabel López, Sebastián Gil, Santiago Chavarro and Santiago Solís",
+        "alts": [
+          "Poster led by illustration",
+          "Poster led by typography",
+          "Poster merging illustration and type"
+        ]
+      }
+    },
+    {
+      "clave": "cervus",
+      "slug": "mapa-cervus",
+      "nombre": "Mapa Cervus",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Ilustración",
+        "Infografía"
+      ],
+      "resumen": "Ruta cervecera ilustrada por Laureles",
+      "texto": [
+        "Un mapa ilustrado de una ruta cervecera en Laureles, Medellín, con estilo artesanal y caricaturesco para un público joven.",
+        "Proyecto de Núcleo profesional I en la UPB."
+      ],
+      "rol": "Ilustración e infografía",
+      "equipo": "Isabel López, Sebastián Gil y Santiago Solís",
+      "herramientas": "Illustrator, Photoshop, Procreate",
+      "imagenes": [
+        [
+          "1",
+          "Mapa Cervus completo"
+        ],
+        [
+          "2",
+          "Mapa Cervus en contexto"
+        ]
+      ],
+      "en": {
+        "resumen": "An illustrated craft beer route in Laureles",
+        "texto": [
+          "An illustrated map of a craft beer route in Laureles, Medellín, with a handmade, cartoonish style for a young audience.",
+          "Professional Core I project at UPB."
+        ],
+        "rol": "Illustration and infographics",
+        "equipo": "Isabel López, Sebastián Gil and Santiago Solís",
+        "alts": [
+          "Full Cervus map",
+          "Cervus map in context"
+        ]
+      }
+    },
+    {
+      "clave": "n64",
+      "slug": "infografia-n64",
+      "nombre": "Infografía N64",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Infografía",
+        "Editorial"
+      ],
+      "resumen": "El impacto de la Nintendo 64",
+      "texto": [
+        "Parte de la revista Arquey: el impacto de la Nintendo 64, sus juegos más vendidos y sus sucesoras, con despiece, cabezote, foto principal y línea de tiempo."
+      ],
+      "rol": "Infografía",
+      "equipo": "Santiago Solís",
+      "herramientas": "InDesign, Illustrator, Photoshop, Lightroom",
+      "imagenes": [
+        [
+          "1",
+          "Infografía de la Nintendo 64 a doble página"
+        ],
+        [
+          "2",
+          "Detalle de la infografía de la Nintendo 64"
+        ]
+      ],
+      "en": {
+        "resumen": "The impact of the Nintendo 64",
+        "texto": [
+          "Part of Arquey magazine: the impact of the Nintendo 64, its best-selling games and its successors, with an exploded view, header, hero photo and timeline."
+        ],
+        "rol": "Infographics",
+        "equipo": "Santiago Solís",
+        "alts": [
+          "Nintendo 64 infographic spread",
+          "Detail of the Nintendo 64 infographic"
+        ]
+      }
+    },
+    {
+      "clave": "acer",
+      "slug": "infografia-acer",
+      "nombre": "Infografía Acer",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Infografía"
+      ],
+      "resumen": "Despiece de un portátil Acer",
+      "texto": [
+        "Despiece de un portátil Acer Chrome C740 Series.",
+        "Proyecto de Núcleo profesional I en la UPB."
+      ],
+      "rol": "Infografía",
+      "equipo": "Santiago Solís",
+      "herramientas": "InDesign, Illustrator",
+      "imagenes": [
+        [
+          "1",
+          "Infografía del despiece del portátil Acer"
+        ]
+      ],
+      "en": {
+        "resumen": "Exploded view of an Acer laptop",
+        "texto": [
+          "Exploded view of an Acer Chrome C740 Series laptop.",
+          "Professional Core I project at UPB."
+        ],
+        "rol": "Infographics",
+        "equipo": "Santiago Solís",
+        "alts": [
+          "Infographic of the Acer laptop exploded view"
+        ]
+      }
+    },
+    {
+      "clave": "dinova",
+      "slug": "dinova",
+      "nombre": "Dinova",
+      "tipo": "Académico",
+      "anio": "2024",
+      "disciplinas": [
+        "Branding"
+      ],
+      "resumen": "Marca para cursos de diseño",
+      "texto": [
+        "Manual de marca para cursos de diseño dirigidos a jóvenes. El logo se construye sobre retículas circulares.",
+        "Proyecto de Taller de proyectación 2 en la UPB."
+      ],
+      "rol": "Identidad de marca",
+      "equipo": "Santiago Solís",
+      "herramientas": "Illustrator",
+      "imagenes": [
+        [
+          "1",
+          "Tarjetas de presentación de Dinova"
+        ],
+        [
+          "2",
+          "Manual de marca de Dinova"
+        ],
+        [
+          "3",
+          "Sobre con la identidad de Dinova"
+        ]
+      ],
+      "en": {
+        "resumen": "A brand for design courses",
+        "texto": [
+          "Brand manual for design courses aimed at young people. The logo is built on circular grids.",
+          "Design Studio 2 project at UPB."
+        ],
+        "rol": "Brand identity",
+        "equipo": "Santiago Solís",
+        "alts": [
+          "Dinova business cards",
+          "Dinova brand manual",
+          "Envelope with the Dinova identity"
+        ]
+      }
+    },
+    {
+      "clave": "emuna",
+      "slug": "emuna",
+      "nombre": "Emuná",
+      "tipo": "Personal",
+      "anio": "2025",
+      "disciplinas": [
+        "Branding"
+      ],
+      "resumen": "Marca para un equipo de psicología",
+      "texto": [
+        "Marca para un equipo emergente de psicología. El logo expresa la relación entre la mente y el crecimiento."
+      ],
+      "rol": "Identidad de marca",
+      "equipo": "Santiago Solís",
+      "herramientas": "Illustrator",
+      "imagenes": [
+        [
+          "1",
+          "Tarjetas de presentación de Emuná"
+        ],
+        [
+          "2",
+          "Guía de identidad de Emuná"
+        ],
+        [
+          "3",
+          "Taza con el logo de Emuná"
+        ]
+      ],
+      "en": {
+        "resumen": "A brand for a psychology team",
+        "texto": [
+          "A brand for an emerging psychology team. The logo expresses the relationship between the mind and growth."
+        ],
+        "rol": "Brand identity",
+        "equipo": "Santiago Solís",
+        "alts": [
+          "Emuná business cards",
+          "Emuná identity guide",
+          "Mug with the Emuná logo"
+        ]
+      }
+    }
+  ]
+}

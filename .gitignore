@@ -1,0 +1,6 @@
+# Privado: originales, contexto y capturas de revisión (no se publican)
+materiales/
+revision/
+.claude/
+.DS_Store
+*.zip
