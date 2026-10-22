@@ -117,7 +117,7 @@ class Pagina:
         """Video corto sin sonido que se repite: entradas ["v1", "texto", "video", ancho, alto]."""
         base = f'{self.t["raiz"]}img/proyectos/{p["clave"]}-{a[0]}'
         w, h = a[3], a[4]
-        return (f'            <figure class="video"><video src="{base}.mp4" poster="{base}.jpg" width="{w}" height="{h}" '
+        return (f'            <figure class="video"><video src="{base}.mp4" poster="{base}.webp" width="{w}" height="{h}" '
                 f'muted loop playsinline preload="none" controls data-auto aria-label="{esc(alt)}"></video>'
                 f'<figcaption>{esc(alt)}</figcaption></figure>')
 

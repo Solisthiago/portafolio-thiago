@@ -14,7 +14,7 @@
   const safe = (fn) => { try { return fn(); } catch (e) { console.warn('[thiago]', e); } };
 
   // Preciso, editorial y con calle
-  const M = { ease: 'power4.out', easeIO: 'power3.inOut', pop: 'back.out(1.4)', dur: 1.05, stagger: 0.075, dist: 48, lerp: 0.085 };
+  const M = { ease: 'power4.out', easeIO: 'power3.inOut', pop: 'back.out(1.4)', dur: 1.05, stagger: 0.075, dist: 48, lerp: 0.12 };
 
   if (!hasGSAP) html.classList.remove('js');
   else {
@@ -139,7 +139,7 @@
       const v = e.target;
       if (e.isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }
     }), { threshold: 0.4 });
-    videos.forEach((v) => { v.controls = false; v.preload = 'metadata'; io.observe(v); });
+    videos.forEach((v) => { v.controls = false; io.observe(v); });   // no se descargan hasta verse
   });
 
   if (!hasGSAP) return;
