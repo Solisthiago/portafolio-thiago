@@ -20,7 +20,7 @@ from urllib.parse import quote
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WHATSAPP = "573005198202"
-ORDEN_DISCIPLINAS = ["Branding", "Editorial", "Infografía", "Ilustración", "Motion", "Web"]
+ORDEN_DISCIPLINAS = ["Branding", "Redes sociales", "Editorial", "Infografía", "Ilustración", "Motion", "Web"]
 
 IDIOMAS = {
     "es": {
@@ -39,7 +39,7 @@ IDIOMAS = {
     "en": {
         "archivo": os.path.join("en", "index.html"),
         "raiz": "../",
-        "disciplinas": {"Branding": "Branding", "Editorial": "Editorial", "Infografía": "Infographics",
+        "disciplinas": {"Branding": "Branding", "Redes sociales": "Social media", "Editorial": "Editorial", "Infografía": "Infographics",
                         "Ilustración": "Illustration", "Motion": "Motion", "Web": "Web"},
         "tipos": {"Profesional": "Professional", "Freelance": "Freelance", "Académico": "Academic", "Personal": "Personal"},
         "todo": "All",
@@ -113,6 +113,14 @@ class Pagina:
         w, h = medidas_webp(os.path.join(RAIZ, grande))
         return r + f"{base}-640.webp", r + grande, w, h
 
+    def video(self, p, a, alt):
+        """Video corto sin sonido que se repite: entradas ["v1", "texto", "video", ancho, alto]."""
+        base = f'{self.t["raiz"]}img/proyectos/{p["clave"]}-{a[0]}'
+        w, h = a[3], a[4]
+        return (f'            <figure class="video"><video src="{base}.mp4" poster="{base}.jpg" width="{w}" height="{h}" '
+                f'muted loop playsinline preload="none" controls data-auto aria-label="{esc(alt)}"></video>'
+                f'<figcaption>{esc(alt)}</figcaption></figure>')
+
     @staticmethod
     def picture(src_m, src_g, w, h, alt):
         fuente = "" if src_m == src_g else f'<source media="(min-width:700px)" srcset="{src_g}">'
@@ -141,6 +149,9 @@ class Pagina:
             portada = self.imagen(p, a[0], a[2] if len(a) > 2 else None)[0]
         figuras = []
         for k, a in enumerate(p["imagenes"]):
+            if len(a) > 2 and a[2] == "video":
+                figuras.append(self.video(p, a, self.alt(p, k)))
+                continue
             src_m, src_g, w, h = self.imagen(p, a[0], a[2] if len(a) > 2 else None)
             clase = ' class="vertical"' if h > w * 1.15 else ""
             alt = self.alt(p, k)

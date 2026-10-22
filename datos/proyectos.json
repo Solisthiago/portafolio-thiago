@@ -2,9 +2,9 @@
   "_como_usar": "Cada proyecto es una entrada, con su versión en inglés dentro de \"en\" (resumen, texto, rol, equipo y alts, uno por imagen y en el mismo orden). Las imágenes van en img/proyectos/ con el nombre <clave>-<n>-1200.webp y <clave>-<n>-640.webp. Después de editar, corre: python3 herramientas/generar-proyectos.py",
   "destacados": [
     "phonedoctors",
-    "revista-rap",
-    "parques-altamar",
-    "revista-arquey"
+    "phonedoctors-redes",
+    "macparts",
+    "revista-rap"
   ],
   "proyectos": [
     {
@@ -55,6 +55,20 @@
         [
           "6",
           "Hoodie, gorra y jersey con el patrón de la marca"
+        ],
+        [
+          "v1",
+          "Taza en 3D con el sistema gráfico de PhoneDoctors",
+          "video",
+          576,
+          464
+        ],
+        [
+          "v2",
+          "Otra versión de la taza, con el sello de la marca",
+          "video",
+          496,
+          480
         ]
       ],
       "en": {
@@ -72,7 +86,188 @@
           "Website redesign on desktop and mobile",
           "Instagram carousel about the iPhone 17",
           "Series of prints about the evolution of the iPhone",
-          "Hoodie, cap and jersey with the brand pattern"
+          "Hoodie, cap and jersey with the brand pattern",
+          "3D mug with the PhoneDoctors graphic system",
+          "Another version of the mug, with the brand seal"
+        ]
+      }
+    },
+    {
+      "clave": "phdr",
+      "slug": "phonedoctors-redes",
+      "nombre": "PhoneDoctors · Redes",
+      "tipo": "Profesional",
+      "anio": "2025–2026",
+      "disciplinas": [
+        "Redes sociales",
+        "Motion"
+      ],
+      "resumen": "Posts, carruseles e historias para Instagram",
+      "texto": [
+        "Además del rebranding, llevo las redes de PhoneDoctors: posts, carruseles e historias para Instagram, con un sistema visual que mantiene la marca reconocible en cada pieza.",
+        "Hay piezas educativas (cuándo cambiar la batería, qué hacer si se quiebra la pantalla), de producto, campañas para aliados como clubes de motos y piezas internas para el equipo."
+      ],
+      "rol": "Diseño para redes sociales y dirección de arte",
+      "equipo": "Diseño · Santiago Solís",
+      "herramientas": "Illustrator, Photoshop, After Effects, herramientas de IA",
+      "imagenes": [
+        [
+          "1",
+          "Post: ¿cuándo debo cambiar la batería de mi iPhone?"
+        ],
+        [
+          "2",
+          "Carrusel del astronauta: ¿cuándo es necesario cambiar tu batería?"
+        ],
+        [
+          "3",
+          "Carrusel del astronauta: cambia tu batería cuando…"
+        ],
+        [
+          "4",
+          "Post: ¿se quebró la pantalla de tu iPhone?"
+        ],
+        [
+          "5",
+          "Post: renueva tu iPhone con plan retoma"
+        ],
+        [
+          "6",
+          "Historia: renueva tu iPhone hoy"
+        ],
+        [
+          "7",
+          "Historia: ¿tus equipos Apple cumplieron su ciclo?"
+        ],
+        [
+          "8",
+          "Campaña de mantenimiento con precio de socio para un club de motos"
+        ],
+        [
+          "9",
+          "Segunda versión de la campaña para clubes de motos"
+        ],
+        [
+          "10",
+          "Post de producto: Smart Watch Garmin Venu"
+        ],
+        [
+          "11",
+          "Post: ¿llega iOS 27 a tu iPhone?"
+        ],
+        [
+          "12",
+          "Post de producto: Mac Case para MacBook"
+        ],
+        [
+          "13",
+          "Post: regreso a clases con MacBook Air M1"
+        ],
+        [
+          "14",
+          "Post interno: día de hamburguesas para el equipo"
+        ],
+        [
+          "15",
+          "Vista del feed de Instagram"
+        ]
+      ],
+      "en": {
+        "resumen": "Posts, carousels and stories for Instagram",
+        "texto": [
+          "Beyond the rebrand, I run PhoneDoctors' social media: posts, carousels and Instagram stories, with a visual system that keeps the brand recognizable in every piece.",
+          "There are educational pieces (when to replace a battery, what to do with a cracked screen), product posts, campaigns for partners like motorcycle clubs and internal pieces for the team."
+        ],
+        "rol": "Social media design and art direction",
+        "equipo": "Design · Santiago Solís",
+        "alts": [
+          "Post: when should I replace my iPhone battery?",
+          "Astronaut carousel: when do you need a new battery?",
+          "Astronaut carousel: replace your battery when…",
+          "Post: cracked iPhone screen?",
+          "Post: upgrade your iPhone with trade-in",
+          "Story: upgrade your iPhone today",
+          "Story: have your Apple devices reached end of life?",
+          "Member-pricing maintenance campaign for a motorcycle club",
+          "Second version of the motorcycle club campaign",
+          "Product post: Garmin Venu smartwatch",
+          "Post: is iOS 27 coming to your iPhone?",
+          "Product post: Mac Case for MacBook",
+          "Post: back to school with MacBook Air M1",
+          "Internal post: burger day for the team",
+          "Instagram feed overview"
+        ]
+      }
+    },
+    {
+      "clave": "mac",
+      "slug": "macparts",
+      "nombre": "Macparts",
+      "tipo": "Profesional",
+      "anio": "2026",
+      "disciplinas": [
+        "Branding",
+        "Redes sociales"
+      ],
+      "resumen": "Identidad y catálogo de baterías para Instagram",
+      "texto": [
+        "Macparts es la marca de repuestos Apple que opera PhoneDoctors. Construí su identidad desde cero: sistema de lockup, avatares para WhatsApp Business y prompts de imagen para el catálogo.",
+        "Para Instagram diseñé un sistema de posts de producto para las baterías de MacBook: cada pieza muestra el modelo, la compatibilidad y las especificaciones clave de un vistazo."
+      ],
+      "rol": "Identidad de marca y diseño para redes sociales",
+      "equipo": "Diseño · Santiago Solís",
+      "herramientas": "Illustrator, Photoshop, herramientas de IA",
+      "imagenes": [
+        [
+          "1",
+          "Post de producto: batería A1466 para MacBook Air 13\""
+        ],
+        [
+          "2",
+          "Post de producto: batería A1465 para MacBook Air 11\""
+        ],
+        [
+          "3",
+          "Post de producto: batería A2171 para MacBook Air 13\""
+        ],
+        [
+          "4",
+          "Post de producto: batería A2977 para MacBook Pro 14\""
+        ],
+        [
+          "5",
+          "Post de producto: batería A1278 para MacBook Pro 13\""
+        ],
+        [
+          "6",
+          "Post de producto: batería A1502 con su empaque"
+        ],
+        [
+          "7",
+          "Post de producto: batería A2797 para MacBook Air 15\""
+        ],
+        [
+          "8",
+          "Post: ¿buscas LCD para tu centro de servicio?"
+        ]
+      ],
+      "en": {
+        "resumen": "Identity and a battery catalog for Instagram",
+        "texto": [
+          "Macparts is the Apple parts brand run by PhoneDoctors. I built its identity from scratch: lockup system, WhatsApp Business avatars and image prompts for the catalog.",
+          "For Instagram I designed a product post system for MacBook batteries: each piece shows the model, compatibility and key specs at a glance."
+        ],
+        "rol": "Brand identity and social media design",
+        "equipo": "Design · Santiago Solís",
+        "alts": [
+          "Product post: A1466 battery for MacBook Air 13\"",
+          "Product post: A1465 battery for MacBook Air 11\"",
+          "Product post: A2171 battery for MacBook Air 13\"",
+          "Product post: A2977 battery for MacBook Pro 14\"",
+          "Product post: A1278 battery for MacBook Pro 13\"",
+          "Product post: A1502 battery with its box",
+          "Product post: A2797 battery for MacBook Air 15\"",
+          "Post: looking for LCD screens for your repair shop?"
         ]
       }
     },

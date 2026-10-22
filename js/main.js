@@ -130,6 +130,18 @@
     new IntersectionObserver(([e]) => { enContacto = e.isIntersecting; pintar(); }, { threshold: 0 }).observe(contacto);
   });
 
+  // Videos cortos de las galerías: se repiten sin sonido solo mientras se ven
+  safe(() => {
+    const videos = $$('video[data-auto]');
+    if (!videos.length) return;
+    if (RM || !('IntersectionObserver' in window)) return;   // con menos movimiento quedan con sus controles
+    const io = new IntersectionObserver((entradas) => entradas.forEach((e) => {
+      const v = e.target;
+      if (e.isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }
+    }), { threshold: 0.4 });
+    videos.forEach((v) => { v.controls = false; v.preload = 'metadata'; io.observe(v); });
+  });
+
   if (!hasGSAP) return;
   if (RM) return;   // con "Reducir movimiento" todo queda visible y quieto
 

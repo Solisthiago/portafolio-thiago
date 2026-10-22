@@ -41,7 +41,7 @@ Y abre http://localhost:8000 en Chrome. Para verlo como celular: clic derecho �
 python3 herramientas/generar-proyectos.py
 ```
 
-Las disciplinas que existen para los filtros son: Branding, Editorial, Infografía, Ilustración, Motion y Web (en inglés salen como Branding, Editorial, Infographics, Illustration, Motion y Web). El comando actualiza las dos páginas.
+Las disciplinas que existen para los filtros son: Branding, Redes sociales, Editorial, Infografía, Ilustración, Motion y Web (en inglés: Branding, Social media, Editorial, Infographics, Illustration, Motion y Web). El comando actualiza las dos páginas.
 
 ## Cambios fáciles
 
@@ -51,6 +51,12 @@ Las disciplinas que existen para los filtros son: Branding, Editorial, Infograf�
 - **Colores:** al inicio de `css/estilos.css`, en `:root`.
 - **Textos fijos de la página en inglés** (secciones, botones, Sobre mí): están escritos directamente en `en/index.html`. Si cambias uno en español, cámbialo también ahí.
 - **Después de cambiar CSS o JS**, sube el número `?v=` en `index.html` y en `en/index.html` (por ejemplo `?v=20261021c`) para que el hosting no muestre la versión vieja.
+
+## Videos
+
+- **Videos cortos en la galería de un proyecto** (se repiten solos, sin sonido): guarda `img/proyectos/<clave>-v1.mp4` y su portada `img/proyectos/<clave>-v1.jpg`, y agrega en `imagenes` una entrada así: `["v1", "Descripción", "video", ancho, alto]`. En `"en"` → `alts` va su descripción en inglés, en el mismo orden.
+- **Reels de la sección "Video y reels"**: el video va en `video/` (MP4, unos 720 × 1280 y menos de 6 MB) con su portada en JPG. En `index.html` y `en/index.html`, copia el bloque `<figure class="reel">` dentro de `reels__grid` y cambia el archivo y el texto.
+- Los videos pesados conviene comprimirlos antes de subirlos; pídemelo y lo hago.
 
 ## Dirección de arte aprobada: "Bloque y firma"
 

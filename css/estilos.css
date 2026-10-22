@@ -214,7 +214,8 @@ html.lenis,html.lenis body{height:auto}
 .galeria{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);padding-bottom:10px;margin:0 calc(var(--gutter)*-1);padding-left:var(--gutter);padding-right:var(--gutter);scrollbar-width:thin}
 .galeria figure{margin:0;flex:0 0 auto;scroll-snap-align:start;width:min(82vw,560px)}
 .galeria figure.vertical{width:min(58vw,360px)}
-.galeria img{width:100%;height:auto;border-radius:var(--r-sm);background:var(--line)}
+.galeria img,.galeria video{display:block;width:100%;height:auto;border-radius:var(--r-sm);background:var(--line)}
+.galeria figure.video{width:min(70vw,420px)}
 .galeria figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
 .sin-imagenes{border:2px dashed var(--line);border-radius:var(--r-lg);padding:28px;text-align:center;color:var(--muted)}
 .vista-previa{position:fixed;left:0;top:0;width:280px;aspect-ratio:4/3;border-radius:var(--r-lg);overflow:hidden;pointer-events:none;z-index:40;opacity:0;scale:.85;
@@ -228,6 +229,24 @@ html.lenis,html.lenis body{height:auto}
   .proy__cuerpo{grid-template-columns:minmax(260px,1fr) 2fr;align-items:start;padding-left:3.4rem}
   .galeria{margin:0;padding:0 0 10px}
 }
+
+/* ===== Video y reels ===== */
+.reels{background:var(--ink);color:var(--bg)}
+.reels .entrada{color:rgba(246,233,217,.82)}
+.reels .seccion__num .rombo,.reels__lista .rombo{background:var(--acc-dark)}
+.reels__grid{display:grid;gap:36px;align-items:center}
+.reel{margin:0;justify-self:center;width:min(78vw,340px)}
+.reel__marco{border-radius:28px;padding:8px;background:var(--ink-deep);box-shadow:0 30px 60px -24px rgba(0,0,0,.6),inset 0 0 0 1.5px rgba(246,233,217,.18)}
+.reel__video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:21px;background:var(--ink-2);object-fit:cover}
+.reel figcaption{margin-top:12px;text-align:center;font-size:.85rem;color:rgba(246,233,217,.75)}
+.reels__info{display:grid;gap:26px;align-content:start}
+.reels__lista{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.reels__lista li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.reels__lista .rombo{margin-top:.5em}
+.reels__lista b{display:block;font-weight:900;font-stretch:72%;text-transform:uppercase;font-size:1.5rem;line-height:1}
+.reels__lista p{margin:4px 0 0;color:rgba(246,233,217,.8)}
+.reels .btn--acento{justify-self:start}
+@media (min-width:900px){.reels__grid{grid-template-columns:5fr 7fr;gap:72px}}
 
 /* ===== Cómo trabajo ===== */
 .pasos{list-style:none;margin:0;padding:0;display:grid;gap:30px;position:relative}
