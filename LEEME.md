@@ -119,8 +119,8 @@ Con "Reducir movimiento" activado, o si el JavaScript falla, todo se ve completo
 1. Titular "Marcas que se leen *de lejos*" (dijiste que no estabas seguro). Otras opciones: "Diseño con *carácter*", "Ideas que se quedan *con firma*".
 2. Firma "Santiago Solís" en el menú y en el pie; "Thiago" en el afiche y en "Me dicen Thiago".
 3. Tu foto sentado a color, recortada por ti; la sombra del piso la dibuja el sitio.
-4. Casos destacados: PhoneDoctors, Portátiles & Consolas, Revista R.A.P. y Parqués Altamar.
-5. Los textos de cada proyecto los escribí a partir de tu documento de contexto. Revisa en especial PhoneDoctors y Portátiles & Consolas.
+4. Casos destacados: PhoneDoctors, Revista R.A.P., Parqués Altamar y Revista Arquey.
+5. Los textos de cada proyecto los escribí a partir de tu documento de contexto. Revisa en especial PhoneDoctors.
 6. En los proyectos de equipo te sumé al final de los créditos. Los nombres de compañeros salen de un resumen automático del Wix: compáralos con el original.
 7. Las imágenes de PhoneDoctors están asignadas a cada pieza según el orden del Wix (rebranding, motion, web, carrusel, cuadros, merch); el mapeo era "probable".
 8. Los cuatro pasos de "Cómo trabajo" los escribí yo.
@@ -132,6 +132,9 @@ Con "Reducir movimiento" activado, o si el JavaScript falla, todo se ve completo
 14. La imagen para compartir es la misma en los dos idiomas y dice «diseñador gráfico».
 
 ## Pendientes
+
+Hay un proyecto guardado sin publicar en `materiales/proyectos-ocultos/` (sus datos e imágenes). Para volver a mostrarlo: copia su entrada al final de `datos/proyectos.json`, devuelve sus imágenes a `img/proyectos/` y corre el generador.
+
 
 | Pendiente | Qué pasa mientras |
 |---|---|
@@ -146,6 +149,5 @@ Con "Reducir movimiento" activado, o si el JavaScript falla, todo se ve completo
 
 - Perfil, proyectos, créditos y contacto: `CONTEXTO-PORTAFOLIO.md` (21-oct-2026) y conversación con Thiago.
 - Imágenes de proyectos: Media Manager del Wix actual, convertidas a WebP.
-- Capturas de Portátiles & Consolas: paquete de contexto.
 - Foto sentado: archivo entregado por Thiago el 21-oct-2026 ("yo sin fondo sentado.png").
 - Paleta Evergreen / Almond Cream: referencia entregada por Thiago.

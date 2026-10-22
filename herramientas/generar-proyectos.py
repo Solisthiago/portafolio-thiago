@@ -193,7 +193,8 @@ def reemplazar(doc, marca, contenido, archivo):
 
 def main():
     datos = json.load(open(os.path.join(RAIZ, "datos", "proyectos.json"), encoding="utf-8"))
-    proyectos = datos["proyectos"]
+    # Los proyectos con "oculto": true se guardan en los datos pero no se publican
+    proyectos = [p for p in datos["proyectos"] if not p.get("oculto")]
     por_slug = {p["slug"]: p for p in proyectos}
     destacados = [por_slug[s] for s in datos["destacados"]]
     for lang in IDIOMAS:

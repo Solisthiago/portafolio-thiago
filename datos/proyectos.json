@@ -2,9 +2,9 @@
   "_como_usar": "Cada proyecto es una entrada, con su versión en inglés dentro de \"en\" (resumen, texto, rol, equipo y alts, uno por imagen y en el mismo orden). Las imágenes van en img/proyectos/ con el nombre <clave>-<n>-1200.webp y <clave>-<n>-640.webp. Después de editar, corre: python3 herramientas/generar-proyectos.py",
   "destacados": [
     "phonedoctors",
-    "portatiles-consolas",
     "revista-rap",
-    "parques-altamar"
+    "parques-altamar",
+    "revista-arquey"
   ],
   "proyectos": [
     {
@@ -73,64 +73,6 @@
           "Instagram carousel about the iPhone 17",
           "Series of prints about the evolution of the iPhone",
           "Hoodie, cap and jersey with the brand pattern"
-        ]
-      }
-    },
-    {
-      "clave": "pyc",
-      "slug": "portatiles-consolas",
-      "nombre": "Portátiles & Consolas",
-      "tipo": "Freelance",
-      "anio": "2026",
-      "disciplinas": [
-        "Web"
-      ],
-      "resumen": "Tienda online de repuestos con pedidos por WhatsApp",
-      "texto": [
-        "Tienda de repuestos para portátiles en el C. C. Carrusel del Éxito, Medellín. Su sitio estaba hecho con un constructor visual en un entorno local y la base de datos se perdió. Rescatamos las imágenes y lo reconstruí mejor.",
-        "Hice un tema de WordPress propio en código, sin constructores, y una tienda sin carrito: el cliente arma su pedido y lo envía por WhatsApp. Sumé un buscador por modelo compatible, fichas con «Compatible con», filtros, un panel «Mi pedido» y una barra fija de compra en celular. Conservé el logo y los banners del cliente y le di un motivo de circuitos que se dibuja con el scroll."
-      ],
-      "rol": "Diseño UX/UI y desarrollo",
-      "equipo": "Santiago Solís",
-      "herramientas": "WordPress, WooCommerce, HTML, CSS, JavaScript",
-      "imagenes": [
-        [
-          "1",
-          "Inicio de la tienda en computador"
-        ],
-        [
-          "2",
-          "Catálogo con filtros por categoría, marca y disponibilidad"
-        ],
-        [
-          "3",
-          "Ficha de producto con la sección «Compatible con»"
-        ],
-        [
-          "5",
-          "Inicio de la tienda en celular",
-          "390"
-        ],
-        [
-          "4",
-          "Panel «Mi pedido» que arma el mensaje de WhatsApp",
-          "390"
-        ]
-      ],
-      "en": {
-        "resumen": "Online parts store with WhatsApp orders",
-        "texto": [
-          "A laptop parts store at the Carrusel del Éxito mall in Medellín. Its site was built with a visual page builder on a local setup, and the database was lost. We rescued the images and I rebuilt it better.",
-          "I coded a custom WordPress theme, no page builders, and a cart-free store: customers build their order and send it through WhatsApp. I added search by compatible model, «Compatible with» product pages, filters, a «My order» panel and a sticky buy bar on mobile. I kept the client's logo and banners and added a circuit motif that draws itself on scroll."
-        ],
-        "rol": "UX/UI design and development",
-        "equipo": "Santiago Solís",
-        "alts": [
-          "Store homepage on desktop",
-          "Catalog with filters by category, brand and stock",
-          "Product page with the «Compatible with» section",
-          "Store homepage on mobile",
-          "«My order» panel that builds the WhatsApp message"
         ]
       }
     },
