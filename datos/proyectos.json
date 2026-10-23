@@ -411,6 +411,7 @@
     },
     {
       "clave": "parques",
+      "oculto": true,
       "slug": "parques-altamar",
       "nombre": "Parqués Altamar",
       "tipo": "Académico",

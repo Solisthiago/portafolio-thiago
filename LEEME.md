@@ -22,6 +22,7 @@ Y abre http://localhost:8000 en Chrome. Para verlo como celular: clic derecho �
 | `js/main.js` | Animaciones, filtros, barra fija y vista previa |
 | `datos/proyectos.json` | **La lista de tus proyectos** (textos, créditos, imágenes) |
 | `herramientas/generar-proyectos.py` | Convierte esa lista en las tarjetas y el archivo de las dos páginas |
+| `herramientas/iconos.svg` | Los íconos de los programas (Illustrator, Photoshop…); el generador los pone en las dos páginas |
 | `img/` | Tu foto, isotipo, patrón, íconos e imagen para compartir |
 | `img/proyectos/` | Las imágenes de cada proyecto en dos tamaños (1200 y 640 px) |
 | `fonts/` | Archivo y Mr Dafoe, servidas desde el propio sitio |
@@ -42,7 +43,7 @@ Y abre http://localhost:8000 en Chrome. Para verlo como celular: clic derecho �
 python3 herramientas/generar-proyectos.py
 ```
 
-Las disciplinas que existen para los filtros son: Branding, Redes sociales, UI/UX, Editorial, Infografía, Ilustración, Motion y Web (en inglés: Branding, Social media, UI/UX, Editorial, Infographics, Illustration, Motion y Web). Para esconder un proyecto sin borrarlo, ponle `"oculto": true`. El comando actualiza las dos páginas.
+Las disciplinas que existen para los filtros son: Branding, Redes sociales, UI/UX, Editorial, Infografía, Ilustración, Motion y Web (en inglés: Branding, Social media, UI/UX, Editorial, Infographics, Illustration, Motion y Web). Para esconder un proyecto sin borrarlo, ponle `"oculto": true`. En «herramientas» escribe los programas separados por coma; los que tienen ícono son: Illustrator, Photoshop, InDesign, Lightroom, After Effects, Premiere Pro, Procreate, Final Cut Pro, DaVinci Resolve, WordPress, HTML y CSS, herramientas de IA. El comando actualiza las dos páginas.
 
 ## Cambios fáciles
 
@@ -51,7 +52,7 @@ Las disciplinas que existen para los filtros son: Branding, Redes sociales, UI/U
 - **WhatsApp:** el número es 573005198202. Cada botón trae su propio mensaje en el enlace (`?text=`), para que sepas desde dónde te escriben.
 - **Colores:** al inicio de `css/estilos.css`, en `:root`.
 - **Textos fijos de la página en inglés** (secciones, botones, Sobre mí): están escritos directamente en `en/index.html`. Si cambias uno en español, cámbialo también ahí.
-- **Después de cambiar CSS o JS**, sube el número `?v=` en `index.html` y en `en/index.html` (por ejemplo `?v=20261023d`) para que el hosting no muestre la versión vieja.
+- **Después de cambiar CSS o JS**, sube el número `?v=` en `index.html` y en `en/index.html` (por ejemplo `?v=20261023e`) para que el hosting no muestre la versión vieja.
 
 ## Videos
 
@@ -126,7 +127,7 @@ Con "Reducir movimiento" activado, o si el JavaScript falla, todo se ve completo
 1. Titular "Marcas que se leen *de lejos*" (dijiste que no estabas seguro). Otras opciones: "Diseño con *carácter*", "Ideas que se quedan *con firma*".
 2. Firma "Santiago Solís" en el menú y en el pie; "Thiago" en el afiche y en "Me dicen Thiago".
 3. Tu foto sentado a color, recortada por ti; la sombra del piso la dibuja el sitio.
-4. Casos destacados: PhoneDoctors, Revista R.A.P., Parqués Altamar y Revista Arquey.
+4. Casos destacados: PhoneDoctors, Proteux UI Kit, PhoneDoctors redes y Macparts.
 5. Los textos de cada proyecto los escribí a partir de tu documento de contexto. Revisa en especial PhoneDoctors.
 6. En los proyectos de equipo te sumé al final de los créditos. Los nombres de compañeros salen de un resumen automático del Wix: compáralos con el original.
 7. Las imágenes de PhoneDoctors están asignadas a cada pieza según el orden del Wix (rebranding, motion, web, carrusel, cuadros, merch); el mapeo era "probable".
@@ -150,6 +151,7 @@ Hay un proyecto guardado sin publicar en `materiales/proyectos-ocultos/` (sus da
 | Testimonio de cliente | Quitado por ahora; se agrega en "Cómo trabajo" cuando lo tengas |
 | Material de calidad de PhoneDoctors (reel de motion, web real) | Se usan las imágenes del Wix |
 | Burguer Native, invitación XV | No aparecen hasta que confirmes y haya permiso |
+| Parqués Altamar | Escondido con `"oculto": true` en `datos/proyectos.json` (23-oct-2026); quítalo para mostrarlo de nuevo |
 | Portátiles & Consolas | Escondido en `materiales/proyectos-ocultos/` hasta que tu papá dé el visto bueno |
 | Dominio propio | Cuando lo compres, pon la URL completa en `og:image`, en los `hreflang` y agrega `<link rel="canonical">` en las dos páginas |
 | Publicación | Netlify con tu cuenta (te guío). Antes, quitar o resolver los marcadores |

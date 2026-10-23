@@ -53,6 +53,27 @@ IDIOMAS = {
 }
 
 
+# Ícono de cada programa (los dibujos están en herramientas/iconos.svg) y su nombre en inglés
+ICONOS = {
+    "illustrator": "ai", "photoshop": "ps", "indesign": "id", "lightroom": "lr", "after effects": "ae",
+    "premiere pro": "pr", "procreate": "procreate", "final cut pro": "fcp", "davinci resolve": "davinci",
+    "wordpress": "wp", "html y css": "html", "herramientas de ia": "ia",
+}
+NOMBRES_EN = {"herramientas de ia": "AI tools", "html y css": "HTML & CSS"}
+
+
+def herramientas_html(texto, lang):
+    """Lista de programas con su ícono: «Illustrator, Photoshop» → píldoras pequeñas."""
+    items = []
+    for nombre in [n.strip() for n in texto.split(",") if n.strip()]:
+        clave = nombre.lower()
+        visible = NOMBRES_EN.get(clave, nombre) if lang == "en" else nombre[0].upper() + nombre[1:]
+        ico = ICONOS.get(clave)
+        svg = f'<svg class="ico" aria-hidden="true"><use href="#i-{ico}"/></svg>' if ico else ""
+        items.append(f'<li>{svg}{esc(visible)}</li>')
+    return f'<ul class="programas">{"".join(items)}</ul>'
+
+
 def medidas_webp(ruta):
     """Ancho y alto de un .webp leyendo su cabecera."""
     with open(ruta, "rb") as f:
@@ -177,7 +198,7 @@ class Pagina:
             <dl class="ficha">
               <dt>{t["rol"]}</dt><dd>{esc(self.campo(p, "rol"))}</dd>
               <dt>{t["equipo"]}</dt><dd>{esc(self.campo(p, "equipo"))}</dd>
-              <dt>{t["herramientas"]}</dt><dd>{esc(p["herramientas"])}</dd>
+              <dt>{t["herramientas"]}</dt><dd>{herramientas_html(p["herramientas"], self.lang)}</dd>
             </dl>
             <a class="btn btn--acento" href="{esc(wa(t["mensaje"].format(p=p["nombre"])))}" target="_blank" rel="noopener">{esc(t["quiero"])} <span class="btn__rombo"></span></a>
           </div>
@@ -217,6 +238,7 @@ def main():
         doc = open(ruta, encoding="utf-8").read()
         doc = reemplazar(doc, "PROYECTOS:DESTACADOS", "\n".join(pag.tarjeta(p, i + 1) for i, p in enumerate(destacados)), ruta)
         doc = reemplazar(doc, "PROYECTOS:FILTROS", pag.filtros(proyectos), ruta)
+        doc = reemplazar(doc, "ICONOS", open(os.path.join(RAIZ, "herramientas", "iconos.svg"), encoding="utf-8").read().strip(), ruta)
         doc = reemplazar(doc, "PROYECTOS:LISTA", "\n".join(pag.fila(p, i + 1) for i, p in enumerate(proyectos)), ruta)
         open(ruta, "w", encoding="utf-8").write(doc)
         print(f"Listo {IDIOMAS[lang]['archivo']}: {len(destacados)} destacados y {len(proyectos)} proyectos.")

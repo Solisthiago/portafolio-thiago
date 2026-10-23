@@ -289,7 +289,11 @@ html.lenis,html.lenis body{height:auto}
 .datos dt{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--acc-dark);margin-bottom:4px}
 .datos dd{margin:0}
 .herramientas{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
-.herramientas li{border:1.5px solid rgba(246,233,217,.5);border-radius:var(--r-pill);padding:4px 11px;font-size:.8rem;font-weight:700}
+.herramientas li{display:inline-flex;align-items:center;gap:7px;border:1.5px solid rgba(246,233,217,.5);border-radius:var(--r-pill);padding:4px 12px 4px 5px;font-size:.8rem;font-weight:700}
+.ico{width:22px;height:22px;flex:none;border-radius:5px;box-shadow:0 0 0 1px rgba(246,233,217,.22)}
+.programas{display:flex;flex-wrap:wrap;gap:6px 14px;list-style:none;margin:0;padding:0}
+.programas li{display:inline-flex;align-items:center;gap:7px}
+.programas .ico{width:20px;height:20px}
 @media (min-width:900px){.sobre__grid{grid-template-columns:5fr 7fr;gap:64px;align-items:start}}
 
 /* ===== Lab ===== */
