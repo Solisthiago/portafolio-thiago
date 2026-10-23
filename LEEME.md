@@ -150,7 +150,6 @@ Hay un proyecto guardado sin publicar en `materiales/proyectos-ocultos/` (sus da
 | Testimonio de cliente | Quitado por ahora; se agrega en "Cómo trabajo" cuando lo tengas |
 | Material de calidad de PhoneDoctors (reel de motion, web real) | Se usan las imágenes del Wix |
 | Burguer Native, invitación XV | No aparecen hasta que confirmes y haya permiso |
-| Motion «10 años» de PhoneDoctors en RGB | Se usa la versión actual (`video/reel-marca-phd.mp4`); se reemplaza cuando la subas |
 | Portátiles & Consolas | Escondido en `materiales/proyectos-ocultos/` hasta que tu papá dé el visto bueno |
 | Dominio propio | Cuando lo compres, pon la URL completa en `og:image`, en los `hreflang` y agrega `<link rel="canonical">` en las dos páginas |
 | Publicación | Netlify con tu cuenta (te guío). Antes, quitar o resolver los marcadores |
