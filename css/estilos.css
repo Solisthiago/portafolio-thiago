@@ -315,14 +315,14 @@ html.lenis,html.lenis body{height:auto}
 .contacto__titulo{max-width:fit-content}
 .contacto__titulo .script{font-size:1em;color:var(--acc-dark);right:auto;left:30%;bottom:.36em}
 .contacto__txt{max-width:40ch;color:rgba(246,233,217,.85);margin:0 0 24px;font-size:1.05rem}
-.contacto__vias{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.contacto__vias{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .btn--borde{--cta:transparent;--cta-ink:var(--bg);border-color:rgba(246,233,217,.7);text-transform:none;font-stretch:100%;font-weight:700}
 @media (hover:hover){.btn--borde:hover{background:var(--bg);border-color:var(--bg);color:var(--ink)}}
 .contacto__vias .link{font-size:1.05rem}
 .pie{border-top:1.5px solid rgba(246,233,217,.2);margin-top:clamp(60px,9vw,110px);padding:28px 0 calc(28px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-size:.85rem;color:rgba(246,233,217,.75)}
 .pie__marca{display:flex;align-items:center;gap:10px;color:var(--bg);font-weight:900;font-stretch:72%;text-transform:uppercase;font-size:1.1rem}
 .pie__marca img{width:42px}
-.firma-pie{display:flex;justify-content:space-between;margin-top:clamp(56px,9vw,120px);clip-path:inset(-300% -5% 0 -5%)}
+.firma-pie{pointer-events:none;display:flex;justify-content:space-between;margin-top:clamp(56px,9vw,120px);clip-path:inset(-300% -5% 0 -5%)}
 .firma-pie span{display:block;font-weight:900;font-stretch:62%;font-size:min(29vw,24rem);line-height:.73;color:var(--bg);opacity:.08;transform-origin:50% 100%;scale:1 1.35}
 
 /* ===== Barra fija (celular) ===== */
