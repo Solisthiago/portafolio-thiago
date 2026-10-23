@@ -20,7 +20,7 @@ from urllib.parse import quote
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WHATSAPP = "573005198202"
-ORDEN_DISCIPLINAS = ["Branding", "Redes sociales", "Editorial", "Infografía", "Ilustración", "Motion", "Web"]
+ORDEN_DISCIPLINAS = ["Branding", "Redes sociales", "UI/UX", "Editorial", "Infografía", "Ilustración", "Motion", "Web"]
 
 IDIOMAS = {
     "es": {
@@ -39,7 +39,7 @@ IDIOMAS = {
     "en": {
         "archivo": os.path.join("en", "index.html"),
         "raiz": "../",
-        "disciplinas": {"Branding": "Branding", "Redes sociales": "Social media", "Editorial": "Editorial", "Infografía": "Infographics",
+        "disciplinas": {"Branding": "Branding", "Redes sociales": "Social media", "UI/UX": "UI/UX", "Editorial": "Editorial", "Infografía": "Infographics",
                         "Ilustración": "Illustration", "Motion": "Motion", "Web": "Web"},
         "tipos": {"Profesional": "Professional", "Freelance": "Freelance", "Académico": "Academic", "Personal": "Personal"},
         "todo": "All",

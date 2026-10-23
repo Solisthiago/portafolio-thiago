@@ -59,7 +59,13 @@
   // Si entran con #p-proyecto en la dirección, se abre
   safe(() => {
     const el = location.hash && d.getElementById(location.hash.slice(1));
-    if (el && el.tagName === 'DETAILS') el.open = true;
+    if (!el) return;
+    if (el.tagName === 'DETAILS') el.open = true;
+    // Al terminar de cargar, se vuelve a ubicar bajo el menú (las imágenes cambian la altura)
+    window.addEventListener('load', () => requestAnimationFrame(() => {
+      const top = el.getBoundingClientRect().top + window.scrollY - altoNav() - 8;
+      if (lenis) lenis.scrollTo(top, { immediate: true }); else window.scrollTo(0, top);
+    }), { once: true });
   });
 
   // Menú que se marca al bajar
@@ -189,7 +195,7 @@
       .add(viajeRombo(), 1.5);
     // Un toque la adelanta
     const portada = $('[data-portada]');
-    if (portada) portada.addEventListener('pointerdown', () => { if (tl.progress() < 1) tl.timeScale(4); }, { once: true });
+    if (portada) portada.addEventListener('pointerdown', () => { if (tl.progress() < 1) tl.timeScale(4); }, { toggleActions: 'play none none none' });
     return tl;
   };
 
@@ -200,46 +206,51 @@
       $$('[data-split]').forEach((el) => {
         SplitText.create(el, {
           type: 'lines', mask: 'lines', linesClass: 'linea', autoSplit: true,
-          onSplit: (self) => gsap.from(self.lines, { yPercent: 125, duration: M.dur, stagger: M.stagger, ease: M.ease, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }),
+          onSplit: (self) => gsap.from(self.lines, { yPercent: 125, duration: M.dur, stagger: M.stagger, ease: M.ease, scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' } }),
         });
       });
     }
 
     // Revelados discretos
-    gsap.set('[data-reveal]', { y: M.dist, opacity: 0 });
-    ScrollTrigger.batch('[data-reveal]', {
-      start: 'top 90%', once: true,
-      onEnter: (b) => gsap.to(b, { y: 0, opacity: 1, duration: M.dur, ease: M.ease, stagger: M.stagger, overwrite: true }),
-    });
+    // (con IntersectionObserver: no falla aunque la página se abra en medio, por ejemplo con #video)
+    const revelar = (sel, desde, hacia) => {
+      const els = $$(sel);
+      if (!els.length) return;
+      gsap.set(els, desde);
+      const io = new IntersectionObserver((entradas) => {
+        const vis = entradas.filter((e) => e.isIntersecting).map((e) => e.target);
+        if (!vis.length) return;
+        vis.forEach((v) => io.unobserve(v));
+        gsap.to(vis, { ...hacia, overwrite: true });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      els.forEach((e) => io.observe(e));
+    };
+    safe(() => revelar('[data-reveal]', { y: M.dist, opacity: 0 }, { y: 0, opacity: 1, duration: M.dur, ease: M.ease, stagger: M.stagger }));
 
     // Trabajo seleccionado: la imagen se abre de abajo hacia arriba
-    $$('[data-caso]').forEach((caso) => {
+    safe(() => $$('[data-caso]').forEach((caso) => {
       const img = $('[data-caso-img]', caso);
-      gsap.timeline({ scrollTrigger: { trigger: caso, start: 'top 88%', once: true } })
+      gsap.timeline({ scrollTrigger: { trigger: caso, start: 'top 88%', toggleActions: 'play none none none' } })
         .fromTo(img, { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0 0 0)', duration: M.dur * 1.1, ease: M.easeIO })
         .from($('img', img), { scale: 1.15, duration: M.dur * 1.4, ease: M.ease }, 0)
         .from($('.caso__cuerpo', caso).children, { y: 20, opacity: 0, duration: M.dur * 0.8, stagger: 0.05, ease: M.ease }, 0.3);
-    });
+    }));
 
     // Archivo: las filas entran en cascada
-    gsap.set('[data-fila]', { opacity: 0, y: 24 });
-    ScrollTrigger.batch('[data-fila]', {
-      start: 'top 94%', once: true,
-      onEnter: (b) => gsap.to(b, { opacity: 1, y: 0, duration: 0.8, stagger: 0.06, ease: M.ease, overwrite: true }),
-    });
+    safe(() => revelar('[data-fila]', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.06, ease: M.ease }));
 
     // Cómo trabajo: la línea avanza con el scroll
     const pasos = $('[data-pasos]');
-    if (pasos) gsap.fromTo(pasos, { '--p': 0 }, { '--p': 1, ease: 'none', scrollTrigger: { trigger: pasos, start: 'top 75%', end: 'bottom 55%', scrub: true } });
+    if (pasos) safe(() => gsap.fromTo(pasos, { '--p': 0 }, { '--p': 1, ease: 'none', scrollTrigger: { trigger: pasos, start: 'top 75%', end: 'bottom 55%', scrub: true } }));
 
     // Sobre mí: el isotipo se pega
-    $$('[data-pop]').forEach((el) => gsap.fromTo(el, { scale: 0, rotate: -30 }, { scale: 1, rotate: 0, duration: 0.8, ease: M.pop, scrollTrigger: { trigger: el, start: 'top 90%', once: true } }));
+    safe(() => $$('[data-pop]').forEach((el) => gsap.fromTo(el, { scale: 0, rotate: -30 }, { scale: 1, rotate: 0, duration: 0.8, ease: M.pop, scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none none' } })));
 
     // Cierre: la cursiva se escribe y THIAGO vuelve a salir del piso
     const sp = $('[data-script-pie]');
-    if (sp) gsap.fromTo(sp, { clipPath: 'inset(-40% 100% -60% -20%)' }, { clipPath: 'inset(-40% -20% -60% -20%)', duration: 1.0, ease: 'power2.inOut', scrollTrigger: { trigger: sp, start: 'top 85%', once: true } });
+    if (sp) safe(() => gsap.fromTo(sp, { clipPath: 'inset(-40% 100% -60% -20%)' }, { clipPath: 'inset(-40% -20% -60% -20%)', duration: 1.0, ease: 'power2.inOut', scrollTrigger: { trigger: sp, start: 'top 85%', toggleActions: 'play none none none' } }));
     const fp = $('[data-firma-pie]');
-    if (fp) gsap.from($$('span', fp), { yPercent: 105, duration: 0.9, stagger: 0.06, ease: 'power3.out', scrollTrigger: { trigger: fp, start: 'top 95%', once: true } });
+    if (fp) safe(() => gsap.from($$('span', fp), { yPercent: 105, duration: 0.9, stagger: 0.06, ease: 'power3.out', scrollTrigger: { trigger: fp, start: 'top 95%', toggleActions: 'play none none none' } }));
 
     // Rescate: si algo ya está en pantalla y sigue escondido al detener el scroll, se muestra
     const pendientes = new Set($$('[data-reveal], [data-fila], [data-split], [data-caso]'));

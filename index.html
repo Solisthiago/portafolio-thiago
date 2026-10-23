@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" href="fonts/archivo-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/mr-dafoe-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/estilos.css?v=20261022b">
+<link rel="stylesheet" href="css/estilos.css?v=20261023c">
 <script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Santiago Solís","alternateName":"Thiago","jobTitle":"Diseñador gráfico","email":"mailto:santiagomezsolis@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Medellín","addressCountry":"CO"},"sameAs":["https://www.linkedin.com/in/santiago-solis-714525398/"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Universidad Pontificia Bolivariana"},{"@type":"EducationalOrganization","name":"SENA"}]}
@@ -110,7 +110,7 @@
     <div class="casos">
 <!-- PROYECTOS:DESTACADOS -->
       <a class="caso" href="#p-phonedoctors" data-caso>
-        <div class="caso__img" data-caso-img><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-1-1200.webp"><img src="img/proyectos/phd-1-640.webp" width="1200" height="675" alt="Sistema de logotipo de PhoneDoctors en sus versiones" loading="lazy" decoding="async"></picture><span class="pildora caso__tag">Branding · Motion · 2025–2026</span></div>
+        <div class="caso__img" data-caso-img><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-11-1200.webp"><img src="img/proyectos/phd-11-640.webp" width="1200" height="848" alt="Manual de uso del logo: versiones, color, tipografías y espacio de respeto" loading="lazy" decoding="async"></picture><span class="pildora caso__tag">Branding · Motion · 2025–2026</span></div>
         <div class="caso__cuerpo">
           <span class="caso__n">01</span>
           <h3>PhoneDoctors</h3>
@@ -118,10 +118,19 @@
           <span class="caso__ver">Ver caso <span class="caso__ir" aria-hidden="true"><i></i></span></span>
         </div>
       </a>
+      <a class="caso" href="#p-proteux" data-caso>
+        <div class="caso__img" data-caso-img><picture><source media="(min-width:700px)" srcset="img/proyectos/pux-5-1200.webp"><img src="img/proyectos/pux-5-640.webp" width="944" height="739" alt="Interfaz de ejemplo: dashboard que combina los componentes" loading="lazy" decoding="async"></picture><span class="pildora caso__tag">UI/UX · Web · 2026</span></div>
+        <div class="caso__cuerpo">
+          <span class="caso__n">02</span>
+          <h3>Proteux UI Kit</h3>
+          <span class="caso__meta">Sistema de diseño en modo claro y oscuro</span>
+          <span class="caso__ver">Ver caso <span class="caso__ir" aria-hidden="true"><i></i></span></span>
+        </div>
+      </a>
       <a class="caso" href="#p-phonedoctors-redes" data-caso>
         <div class="caso__img" data-caso-img><picture><source media="(min-width:700px)" srcset="img/proyectos/phdr-1-1200.webp"><img src="img/proyectos/phdr-1-640.webp" width="1024" height="1280" alt="Post: ¿cuándo debo cambiar la batería de mi iPhone?" loading="lazy" decoding="async"></picture><span class="pildora caso__tag">Redes sociales · Motion · 2025–2026</span></div>
         <div class="caso__cuerpo">
-          <span class="caso__n">02</span>
+          <span class="caso__n">03</span>
           <h3>PhoneDoctors · Redes</h3>
           <span class="caso__meta">Posts, carruseles e historias para Instagram</span>
           <span class="caso__ver">Ver caso <span class="caso__ir" aria-hidden="true"><i></i></span></span>
@@ -130,18 +139,9 @@
       <a class="caso" href="#p-macparts" data-caso>
         <div class="caso__img" data-caso-img><picture><source media="(min-width:700px)" srcset="img/proyectos/mac-1-1200.webp"><img src="img/proyectos/mac-1-640.webp" width="1024" height="1280" alt="Post de producto: batería A1466 para MacBook Air 13&quot;" loading="lazy" decoding="async"></picture><span class="pildora caso__tag">Branding · Redes sociales · 2026</span></div>
         <div class="caso__cuerpo">
-          <span class="caso__n">03</span>
+          <span class="caso__n">04</span>
           <h3>Macparts</h3>
           <span class="caso__meta">Identidad y catálogo de baterías para Instagram</span>
-          <span class="caso__ver">Ver caso <span class="caso__ir" aria-hidden="true"><i></i></span></span>
-        </div>
-      </a>
-      <a class="caso" href="#p-revista-rap" data-caso>
-        <div class="caso__img" data-caso-img><picture><source media="(min-width:700px)" srcset="img/proyectos/rap-1-1200.webp"><img src="img/proyectos/rap-1-640.webp" width="1200" height="987" alt="Revista R.A.P. abierta en el artículo de Oblivion Mighty Trash" loading="lazy" decoding="async"></picture><span class="pildora caso__tag">Editorial · 2024</span></div>
-        <div class="caso__cuerpo">
-          <span class="caso__n">04</span>
-          <h3>Revista R.A.P.</h3>
-          <span class="caso__meta">La nueva escena del rap de Medellín</span>
           <span class="caso__ver">Ver caso <span class="caso__ir" aria-hidden="true"><i></i></span></span>
         </div>
       </a>
@@ -164,6 +164,7 @@
         <li><button type="button" class="filtro" data-filtro="todo" aria-pressed="true">Todo</button></li>
         <li><button type="button" class="filtro" data-filtro="Branding" aria-pressed="false">Branding</button></li>
         <li><button type="button" class="filtro" data-filtro="Redes sociales" aria-pressed="false">Redes sociales</button></li>
+        <li><button type="button" class="filtro" data-filtro="UI/UX" aria-pressed="false">UI/UX</button></li>
         <li><button type="button" class="filtro" data-filtro="Editorial" aria-pressed="false">Editorial</button></li>
         <li><button type="button" class="filtro" data-filtro="Infografía" aria-pressed="false">Infografía</button></li>
         <li><button type="button" class="filtro" data-filtro="Ilustración" aria-pressed="false">Ilustración</button></li>
@@ -173,7 +174,7 @@
     </ul>
     <div class="lista" data-lista>
 <!-- PROYECTOS:LISTA -->
-      <details class="proy" id="p-phonedoctors" data-tags="Branding Motion Web Editorial" data-cover="img/proyectos/phd-1-640.webp" data-fila>
+      <details class="proy" id="p-phonedoctors" data-tags="Branding Motion Web Editorial" data-cover="img/proyectos/phd-11-640.webp" data-fila>
         <summary>
           <span class="proy__n">01</span>
           <span class="proy__nombre">PhoneDoctors</span>
@@ -192,13 +193,19 @@
             <a class="btn btn--acento" href="https://wa.me/573005198202?text=Hola%20Thiago%2C%20vi%20el%20proyecto%20PhoneDoctors%20en%20tu%20portafolio%20y%20quiero%20hablar%20de%20algo%20parecido." target="_blank" rel="noopener">Quiero algo así <span class="btn__rombo"></span></a>
           </div>
           <div class="galeria" data-lenis-prevent tabindex="0" aria-label="Imágenes de PhoneDoctors">
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-11-1200.webp"><img src="img/proyectos/phd-11-640.webp" width="1200" height="848" alt="Manual de uso del logo: versiones, color, tipografías y espacio de respeto" loading="lazy" decoding="async"></picture><figcaption>Manual de uso del logo: versiones, color, tipografías y espacio de respeto</figcaption></figure>
             <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-1-1200.webp"><img src="img/proyectos/phd-1-640.webp" width="1200" height="675" alt="Sistema de logotipo de PhoneDoctors en sus versiones" loading="lazy" decoding="async"></picture><figcaption>Sistema de logotipo de PhoneDoctors en sus versiones</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-12-1200.webp"><img src="img/proyectos/phd-12-640.webp" width="1200" height="1200" alt="Logo en bloque en las seis combinaciones de color de la marca" loading="lazy" decoding="async"></picture><figcaption>Logo en bloque en las seis combinaciones de color de la marca</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-13-1200.webp"><img src="img/proyectos/phd-13-640.webp" width="1200" height="800" alt="Logo horizontal sobre los cuatro fondos de la marca" loading="lazy" decoding="async"></picture><figcaption>Logo horizontal sobre los cuatro fondos de la marca</figcaption></figure>
             <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-7-1200.webp"><img src="img/proyectos/phd-7-640.webp" width="940" height="606" alt="Logotipo de PhoneDoctors" loading="lazy" decoding="async"></picture><figcaption>Logotipo de PhoneDoctors</figcaption></figure>
             <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-2-1200.webp"><img src="img/proyectos/phd-2-640.webp" width="1200" height="659" alt="Cuadro de la pieza de lanzamiento en motion" loading="lazy" decoding="async"></picture><figcaption>Cuadro de la pieza de lanzamiento en motion</figcaption></figure>
             <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-3-1200.webp"><img src="img/proyectos/phd-3-640.webp" width="1200" height="1111" alt="Rediseño del sitio web en computador y celular" loading="lazy" decoding="async"></picture><figcaption>Rediseño del sitio web en computador y celular</figcaption></figure>
             <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-4-1200.webp"><img src="img/proyectos/phd-4-640.webp" width="1200" height="795" alt="Carrusel de Instagram sobre el iPhone 17" loading="lazy" decoding="async"></picture><figcaption>Carrusel de Instagram sobre el iPhone 17</figcaption></figure>
             <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-5-1200.webp"><img src="img/proyectos/phd-5-640.webp" width="1200" height="888" alt="Serie de cuadros sobre la evolución del iPhone" loading="lazy" decoding="async"></picture><figcaption>Serie de cuadros sobre la evolución del iPhone</figcaption></figure>
             <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-6-1200.webp"><img src="img/proyectos/phd-6-640.webp" width="1200" height="591" alt="Hoodie, gorra y jersey con el patrón de la marca" loading="lazy" decoding="async"></picture><figcaption>Hoodie, gorra y jersey con el patrón de la marca</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-14-1200.webp"><img src="img/proyectos/phd-14-640.webp" width="1200" height="1011" alt="Camisetas con el logo «Phd» y el sello #LosTesosEnLaManzana" loading="lazy" decoding="async"></picture><figcaption>Camisetas con el logo «Phd» y el sello #LosTesosEnLaManzana</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-15-1200.webp"><img src="img/proyectos/phd-15-640.webp" width="1200" height="676" alt="Gorra bordada con el sello de la marca" loading="lazy" decoding="async"></picture><figcaption>Gorra bordada con el sello de la marca</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/phd-16-1200.webp"><img src="img/proyectos/phd-16-640.webp" width="1200" height="540" alt="Arte del vaso con la frase del equipo" loading="lazy" decoding="async"></picture><figcaption>Arte del vaso con la frase del equipo</figcaption></figure>
             <figure class="video"><video src="img/proyectos/phd-v1.mp4" poster="img/proyectos/phd-v1.webp" width="576" height="464" muted loop playsinline preload="none" controls data-auto aria-label="Taza en 3D con el sistema gráfico de PhoneDoctors"></video><figcaption>Taza en 3D con el sistema gráfico de PhoneDoctors</figcaption></figure>
             <figure class="video"><video src="img/proyectos/phd-v2.mp4" poster="img/proyectos/phd-v2.webp" width="496" height="480" muted loop playsinline preload="none" controls data-auto aria-label="Otra versión de la taza, con el sello de la marca"></video><figcaption>Otra versión de la taza, con el sello de la marca</figcaption></figure>
           </div>
@@ -241,9 +248,36 @@
           </div>
         </div>
       </details>
-      <details class="proy" id="p-macparts" data-tags="Branding Redes sociales" data-cover="img/proyectos/mac-1-640.webp" data-fila>
+      <details class="proy" id="p-proteux" data-tags="UI/UX Web" data-cover="img/proyectos/pux-5-640.webp" data-fila>
         <summary>
           <span class="proy__n">03</span>
+          <span class="proy__nombre">Proteux UI Kit</span>
+          <span class="proy__meta"><span class="proy__tipo">Freelance</span><span>2026</span><span>UI/UX, Web</span></span>
+          <span class="proy__abrir" aria-hidden="true"></span>
+        </summary>
+        <div class="proy__cuerpo">
+          <div class="proy__texto">
+            <p>Proteux es un software de gestión. Diseñé su kit de UI: un sistema de diseño completo en modo claro y oscuro para que la interfaz crezca ordenada.</p>
+            <p>Incluye paleta de marca y neutros, tipografía, radios de borde, botones, etiquetas de estado, campos de entrada, tarjetas de estadísticas, tabla de órdenes y una interfaz de ejemplo que combina todos los componentes.</p>
+            <dl class="ficha">
+              <dt>Rol</dt><dd>Diseño UI y sistema de diseño</dd>
+              <dt>Equipo</dt><dd>Kit de UI · Santiago Solís</dd>
+              <dt>Herramientas</dt><dd>Illustrator</dd>
+            </dl>
+            <a class="btn btn--acento" href="https://wa.me/573005198202?text=Hola%20Thiago%2C%20vi%20el%20proyecto%20Proteux%20UI%20Kit%20en%20tu%20portafolio%20y%20quiero%20hablar%20de%20algo%20parecido." target="_blank" rel="noopener">Quiero algo así <span class="btn__rombo"></span></a>
+          </div>
+          <div class="galeria" data-lenis-prevent tabindex="0" aria-label="Imágenes de Proteux UI Kit">
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/pux-5-1200.webp"><img src="img/proyectos/pux-5-640.webp" width="944" height="739" alt="Interfaz de ejemplo: dashboard que combina los componentes" loading="lazy" decoding="async"></picture><figcaption>Interfaz de ejemplo: dashboard que combina los componentes</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/pux-1-1200.webp"><img src="img/proyectos/pux-1-640.webp" width="2000" height="599" alt="Kit de UI de Proteux completo" loading="lazy" decoding="async"></picture><figcaption>Kit de UI de Proteux completo</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/pux-2-1200.webp"><img src="img/proyectos/pux-2-640.webp" width="1200" height="1273" alt="Fundamentos: paleta, tipografía, radios y botones en modo claro y oscuro" loading="lazy" decoding="async"></picture><figcaption>Fundamentos: paleta, tipografía, radios y botones en modo claro y oscuro</figcaption></figure>
+            <figure class="vertical"><picture><source media="(min-width:700px)" srcset="img/proyectos/pux-3-1200.webp"><img src="img/proyectos/pux-3-640.webp" width="744" height="1127" alt="Colores de texto, íconos y fondos en modo claro y oscuro" loading="lazy" decoding="async"></picture><figcaption>Colores de texto, íconos y fondos en modo claro y oscuro</figcaption></figure>
+            <figure><picture><source media="(min-width:700px)" srcset="img/proyectos/pux-4-1200.webp"><img src="img/proyectos/pux-4-640.webp" width="1200" height="1072" alt="Componentes: campos de entrada, tarjetas de estadísticas y tabla de órdenes" loading="lazy" decoding="async"></picture><figcaption>Componentes: campos de entrada, tarjetas de estadísticas y tabla de órdenes</figcaption></figure>
+          </div>
+        </div>
+      </details>
+      <details class="proy" id="p-macparts" data-tags="Branding Redes sociales" data-cover="img/proyectos/mac-1-640.webp" data-fila>
+        <summary>
+          <span class="proy__n">04</span>
           <span class="proy__nombre">Macparts</span>
           <span class="proy__meta"><span class="proy__tipo">Profesional</span><span>2026</span><span>Branding, Redes sociales</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -273,7 +307,7 @@
       </details>
       <details class="proy" id="p-revista-rap" data-tags="Editorial" data-cover="img/proyectos/rap-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">04</span>
+          <span class="proy__n">05</span>
           <span class="proy__nombre">Revista R.A.P.</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Editorial</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -299,7 +333,7 @@
       </details>
       <details class="proy" id="p-parques-altamar" data-tags="Ilustración Editorial" data-cover="img/proyectos/parques-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">05</span>
+          <span class="proy__n">06</span>
           <span class="proy__nombre">Parqués Altamar</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Ilustración, Editorial</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -325,7 +359,7 @@
       </details>
       <details class="proy" id="p-revista-arquey" data-tags="Editorial" data-cover="img/proyectos/arquey-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">06</span>
+          <span class="proy__n">07</span>
           <span class="proy__nombre">Revista Arquey</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Editorial</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -351,7 +385,7 @@
       </details>
       <details class="proy" id="p-afiches-serigrafia" data-tags="Ilustración" data-cover="img/proyectos/afiches-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">07</span>
+          <span class="proy__n">08</span>
           <span class="proy__nombre">Afiches en serigrafía</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Ilustración</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -376,7 +410,7 @@
       </details>
       <details class="proy" id="p-mapa-cervus" data-tags="Ilustración Infografía" data-cover="img/proyectos/cervus-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">08</span>
+          <span class="proy__n">09</span>
           <span class="proy__nombre">Mapa Cervus</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Ilustración, Infografía</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -400,7 +434,7 @@
       </details>
       <details class="proy" id="p-infografia-n64" data-tags="Infografía Editorial" data-cover="img/proyectos/n64-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">09</span>
+          <span class="proy__n">10</span>
           <span class="proy__nombre">Infografía N64</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Infografía, Editorial</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -423,7 +457,7 @@
       </details>
       <details class="proy" id="p-infografia-acer" data-tags="Infografía" data-cover="img/proyectos/acer-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">10</span>
+          <span class="proy__n">11</span>
           <span class="proy__nombre">Infografía Acer</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Infografía</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -446,7 +480,7 @@
       </details>
       <details class="proy" id="p-dinova" data-tags="Branding" data-cover="img/proyectos/dinova-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">11</span>
+          <span class="proy__n">12</span>
           <span class="proy__nombre">Dinova</span>
           <span class="proy__meta"><span class="proy__tipo">Académico</span><span>2024</span><span>Branding</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -471,7 +505,7 @@
       </details>
       <details class="proy" id="p-emuna" data-tags="Branding" data-cover="img/proyectos/emuna-1-640.webp" data-fila>
         <summary>
-          <span class="proy__n">12</span>
+          <span class="proy__n">13</span>
           <span class="proy__nombre">Emuná</span>
           <span class="proy__meta"><span class="proy__tipo">Personal</span><span>2025</span><span>Branding</span></span>
           <span class="proy__abrir" aria-hidden="true"></span>
@@ -509,12 +543,28 @@
       <p class="entrada" data-reveal>Motion graphics, edición y subtítulos para redes: piezas cortas, verticales y pensadas para que se vean hasta el final.</p>
     </div>
     <div class="reels__grid">
-      <figure class="reel" data-reveal>
-        <div class="reel__marco">
-          <video class="reel__video" src="video/reel-bateria-phd.mp4" poster="video/reel-bateria-phd.webp" width="720" height="1280" controls playsinline preload="none" aria-label="Reel de motion graphics: cambio de batería en PhoneDoctors"></video>
-        </div>
-        <figcaption>Cambio de batería · PhoneDoctors · Motion graphics</figcaption>
-      </figure>
+      <div class="reels__videos" data-reveal data-lenis-prevent>
+        <figure class="reel">
+          <div class="reel__marco"><video class="reel__video" src="video/reel-marca-phd.mp4" poster="video/reel-marca-phd.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Historia de la marca"></video></div>
+          <figcaption><b>Historia de la marca</b>Motion · PhoneDoctors</figcaption>
+        </figure>
+        <figure class="reel">
+          <div class="reel__marco"><video class="reel__video" src="video/reel-bateria-phd.mp4" poster="video/reel-bateria-phd.webp" width="720" height="1280" controls playsinline preload="none" aria-label="Cambio de batería"></video></div>
+          <figcaption><b>Cambio de batería</b>Motion · PhoneDoctors</figcaption>
+        </figure>
+        <figure class="reel">
+          <div class="reel__marco"><video class="reel__video" src="video/reel-bateria-iphone-phd.mp4" poster="video/reel-bateria-iphone-phd.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Batería que dura todo el día"></video></div>
+          <figcaption><b>Batería que dura todo el día</b>Motion tipográfico</figcaption>
+        </figure>
+        <figure class="reel">
+          <div class="reel__marco"><video class="reel__video" src="video/reel-reparacion-phd.mp4" poster="video/reel-reparacion-phd.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Reparación en cámara"></video></div>
+          <figcaption><b>Reparación en cámara</b>Edición y subtítulos</figcaption>
+        </figure>
+        <figure class="reel">
+          <div class="reel__marco"><video class="reel__video" src="video/reel-halloween-phd.mp4" poster="video/reel-halloween-phd.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Ningún iPhone muere"></video></div>
+          <figcaption><b>Ningún iPhone muere</b>Edición · Halloween</figcaption>
+        </figure>
+      </div>
       <div class="reels__info" data-reveal>
         <ul class="reels__lista">
           <li><span class="rombo"></span><div><b>Motion graphics</b><p>Animación de marca y piezas explicativas en After Effects.</p></div></li>
@@ -638,6 +688,6 @@
 <script src="vendor/ScrollTrigger.min.js" defer></script>
 <script src="vendor/SplitText.min.js" defer></script>
 <script src="vendor/lenis.min.js" defer></script>
-<script src="js/main.js?v=20261022b" defer></script>
+<script src="js/main.js?v=20261023c" defer></script>
 </body>
 </html>

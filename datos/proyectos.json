@@ -2,9 +2,9 @@
   "_como_usar": "Cada proyecto es una entrada, con su versión en inglés dentro de \"en\" (resumen, texto, rol, equipo y alts, uno por imagen y en el mismo orden). Las imágenes van en img/proyectos/ con el nombre <clave>-<n>-1200.webp y <clave>-<n>-640.webp. Después de editar, corre: python3 herramientas/generar-proyectos.py",
   "destacados": [
     "phonedoctors",
+    "proteux",
     "phonedoctors-redes",
-    "macparts",
-    "revista-rap"
+    "macparts"
   ],
   "proyectos": [
     {
@@ -29,8 +29,20 @@
       "herramientas": "Illustrator, Photoshop, After Effects, InDesign",
       "imagenes": [
         [
+          "11",
+          "Manual de uso del logo: versiones, color, tipografías y espacio de respeto"
+        ],
+        [
           "1",
           "Sistema de logotipo de PhoneDoctors en sus versiones"
+        ],
+        [
+          "12",
+          "Logo en bloque en las seis combinaciones de color de la marca"
+        ],
+        [
+          "13",
+          "Logo horizontal sobre los cuatro fondos de la marca"
         ],
         [
           "7",
@@ -57,6 +69,18 @@
           "Hoodie, gorra y jersey con el patrón de la marca"
         ],
         [
+          "14",
+          "Camisetas con el logo «Phd» y el sello #LosTesosEnLaManzana"
+        ],
+        [
+          "15",
+          "Gorra bordada con el sello de la marca"
+        ],
+        [
+          "16",
+          "Arte del vaso con la frase del equipo"
+        ],
+        [
           "v1",
           "Taza en 3D con el sistema gráfico de PhoneDoctors",
           "video",
@@ -80,13 +104,19 @@
         "rol": "Graphic design, motion, web and creative direction",
         "equipo": "Design · Santiago Solís",
         "alts": [
+          "Logo usage guide: versions, color, typefaces and clear space",
           "PhoneDoctors logo system in its versions",
+          "Stacked logo in the brand's six color combinations",
+          "Horizontal logo on the brand's four backgrounds",
           "PhoneDoctors logo",
           "Still from the motion launch piece",
           "Website redesign on desktop and mobile",
           "Instagram carousel about the iPhone 17",
           "Series of prints about the evolution of the iPhone",
           "Hoodie, cap and jersey with the brand pattern",
+          "T-shirts with the «Phd» logo and the #LosTesosEnLaManzana seal",
+          "Embroidered cap with the brand seal",
+          "Mug artwork with the team quote",
           "3D mug with the PhoneDoctors graphic system",
           "Another version of the mug, with the brand seal"
         ]
@@ -196,6 +226,63 @@
           "Post: back to school with MacBook Air M1",
           "Internal post: burger day for the team",
           "Instagram feed overview"
+        ]
+      }
+    },
+    {
+      "clave": "pux",
+      "slug": "proteux",
+      "nombre": "Proteux UI Kit",
+      "tipo": "Freelance",
+      "anio": "2026",
+      "disciplinas": [
+        "UI/UX",
+        "Web"
+      ],
+      "resumen": "Sistema de diseño en modo claro y oscuro",
+      "texto": [
+        "Proteux es un software de gestión. Diseñé su kit de UI: un sistema de diseño completo en modo claro y oscuro para que la interfaz crezca ordenada.",
+        "Incluye paleta de marca y neutros, tipografía, radios de borde, botones, etiquetas de estado, campos de entrada, tarjetas de estadísticas, tabla de órdenes y una interfaz de ejemplo que combina todos los componentes."
+      ],
+      "rol": "Diseño UI y sistema de diseño",
+      "equipo": "Kit de UI · Santiago Solís",
+      "herramientas": "Illustrator",
+      "imagenes": [
+        [
+          "5",
+          "Interfaz de ejemplo: dashboard que combina los componentes"
+        ],
+        [
+          "1",
+          "Kit de UI de Proteux completo"
+        ],
+        [
+          "2",
+          "Fundamentos: paleta, tipografía, radios y botones en modo claro y oscuro"
+        ],
+        [
+          "3",
+          "Colores de texto, íconos y fondos en modo claro y oscuro"
+        ],
+        [
+          "4",
+          "Componentes: campos de entrada, tarjetas de estadísticas y tabla de órdenes"
+        ]
+      ],
+      "en": {
+        "resumen": "A design system in light and dark mode",
+        "texto": [
+          "Proteux is a management software. I designed its UI kit: a complete design system in light and dark mode so the interface can grow in an orderly way.",
+          "It includes brand and neutral palettes, typography, border radii, buttons, status tags, input fields, stat cards, an orders table and a sample interface that combines every component."
+        ],
+        "rol": "UI design and design system",
+        "equipo": "UI kit · Santiago Solís",
+        "alts": [
+          "Sample interface: a dashboard combining the components",
+          "Complete Proteux UI kit",
+          "Foundations: palette, typography, radii and buttons in light and dark mode",
+          "Text, icon and background colors in light and dark mode",
+          "Components: input fields, stat cards and orders table"
         ]
       }
     },

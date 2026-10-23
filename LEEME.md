@@ -27,7 +27,8 @@ Y abre http://localhost:8000 en Chrome. Para verlo como celular: clic derecho �
 | `fonts/` | Archivo y Mr Dafoe, servidas desde el propio sitio |
 | `vendor/` | GSAP 3.13.0 (con ScrollTrigger y SplitText) y Lenis 1.3.11 |
 | `direccion-de-arte.html` | La hoja de muestra con que aprobamos el diseño (no se publica) |
-| `materiales/` | Originales: fotos, recortes, el paquete de contexto (no se publica) |
+| `video/` | Los reels de la sección «Video y reels», con su portada |
+| `materiales/` | Originales: fotos, recortes, el paquete de contexto, `brands2/` (marcas de PhoneDoctors, Macparts y Proteux) y `reels-originales/` (no se publica) |
 | `revision/` | Capturas de revisión (no se publica) |
 
 ## Cómo agregar o cambiar un proyecto
@@ -41,7 +42,7 @@ Y abre http://localhost:8000 en Chrome. Para verlo como celular: clic derecho �
 python3 herramientas/generar-proyectos.py
 ```
 
-Las disciplinas que existen para los filtros son: Branding, Redes sociales, Editorial, Infografía, Ilustración, Motion y Web (en inglés: Branding, Social media, Editorial, Infographics, Illustration, Motion y Web). El comando actualiza las dos páginas.
+Las disciplinas que existen para los filtros son: Branding, Redes sociales, UI/UX, Editorial, Infografía, Ilustración, Motion y Web (en inglés: Branding, Social media, UI/UX, Editorial, Infographics, Illustration, Motion y Web). Para esconder un proyecto sin borrarlo, ponle `"oculto": true`. El comando actualiza las dos páginas.
 
 ## Cambios fáciles
 
@@ -50,12 +51,12 @@ Las disciplinas que existen para los filtros son: Branding, Redes sociales, Edit
 - **WhatsApp:** el número es 573005198202. Cada botón trae su propio mensaje en el enlace (`?text=`), para que sepas desde dónde te escriben.
 - **Colores:** al inicio de `css/estilos.css`, en `:root`.
 - **Textos fijos de la página en inglés** (secciones, botones, Sobre mí): están escritos directamente en `en/index.html`. Si cambias uno en español, cámbialo también ahí.
-- **Después de cambiar CSS o JS**, sube el número `?v=` en `index.html` y en `en/index.html` (por ejemplo `?v=20261021c`) para que el hosting no muestre la versión vieja.
+- **Después de cambiar CSS o JS**, sube el número `?v=` en `index.html` y en `en/index.html` (por ejemplo `?v=20261023d`) para que el hosting no muestre la versión vieja.
 
 ## Videos
 
-- **Videos cortos en la galería de un proyecto** (se repiten solos, sin sonido): guarda `img/proyectos/<clave>-v1.mp4` y su portada `img/proyectos/<clave>-v1.jpg`, y agrega en `imagenes` una entrada así: `["v1", "Descripción", "video", ancho, alto]`. En `"en"` → `alts` va su descripción en inglés, en el mismo orden.
-- **Reels de la sección "Video y reels"**: el video va en `video/` (MP4, unos 720 × 1280 y menos de 6 MB) con su portada en JPG. En `index.html` y `en/index.html`, copia el bloque `<figure class="reel">` dentro de `reels__grid` y cambia el archivo y el texto.
+- **Videos cortos en la galería de un proyecto** (se repiten solos, sin sonido): guarda `img/proyectos/<clave>-v1.mp4` y su portada `img/proyectos/<clave>-v1.webp`, y agrega en `imagenes` una entrada así: `["v1", "Descripción", "video", ancho, alto]`. En `"en"` → `alts` va su descripción en inglés, en el mismo orden.
+- **Reels de la sección "Video y reels"**: el video va en `video/` (MP4, unos 720 × 1280 y menos de 6 MB) con su portada en JPG. En `index.html` y `en/index.html`, copia un bloque `<figure class="reel">` dentro de `reels__videos` y cambia el archivo y el texto. Hoy hay 5 (todos de PhoneDoctors). En celular se deslizan de lado; en computador quedan en una fila de 5.
 - Los videos pesados conviene comprimirlos antes de subirlos; pídemelo y lo hago.
 
 ## Dirección de arte aprobada: "Bloque y firma"
@@ -89,7 +90,7 @@ Isotipo (tu cara) · rombo · nombre de afiche THIAGO / SOLÍS · microtexto jus
 Preciso, editorial y con calle. Valores técnicos:
 
 ```js
-const M = { ease: 'power4.out', easeIO: 'power3.inOut', pop: 'back.out(1.4)', dur: 1.05, stagger: 0.075, dist: 48, lerp: 0.085 };
+const M = { ease: 'power4.out', easeIO: 'power3.inOut', pop: 'back.out(1.4)', dur: 1.05, stagger: 0.075, dist: 48, lerp: 0.12 };
 ```
 
 CSS: `--ease: cubic-bezier(.22,1,.36,1)`, `--ease-io: cubic-bezier(.76,0,.24,1)`, `--ease-pop: cubic-bezier(.34,1.4,.64,1)`, `--dur: 1.05s`, `--dist: 48px`.
@@ -134,8 +135,10 @@ Con "Reducir movimiento" activado, o si el JavaScript falla, todo se ve completo
 10. El botón fijo en celular es violeta para que se vea sobre las secciones verdes.
 11. Verde medio y Evergreen noche son variaciones de tu paleta, no colores nuevos.
 12. La versión en inglés la traduje yo. El botón principal es «Contact me». El cierre es «Let's work *together*», más corto que la traducción literal para que la cursiva no tape el título.
-13. Quité Macparts del archivo y de la frase de «Sobre mí» (21-oct-2026).
+13. Macparts volvió al archivo con sus posts de Instagram (22-oct-2026).
 14. La imagen para compartir es la misma en los dos idiomas y dice «diseñador gráfico».
+15. Proteux aparece solo como **UI Kit** (lo único tuyo): interfaz, kit completo, fundamentos, colores y componentes, sacados del manual en `materiales/brands2/`.
+16. La galería de PhoneDoctors suma láminas de marca (usos del logo, logo en bloque, versión horizontal) y la línea de merch (camisetas, gorra, vaso).
 
 ## Pendientes
 
@@ -146,7 +149,9 @@ Hay un proyecto guardado sin publicar en `materiales/proyectos-ocultos/` (sus da
 |---|---|
 | Testimonio de cliente | Quitado por ahora; se agrega en "Cómo trabajo" cuando lo tengas |
 | Material de calidad de PhoneDoctors (reel de motion, web real) | Se usan las imágenes del Wix |
-| Burguer Native, invitación XV, Proteux | No aparecen hasta que confirmes y haya permiso |
+| Burguer Native, invitación XV | No aparecen hasta que confirmes y haya permiso |
+| Motion «10 años» de PhoneDoctors en RGB | Se usa la versión actual (`video/reel-marca-phd.mp4`); se reemplaza cuando la subas |
+| Portátiles & Consolas | Escondido en `materiales/proyectos-ocultos/` hasta que tu papá dé el visto bueno |
 | Dominio propio | Cuando lo compres, pon la URL completa en `og:image`, en los `hreflang` y agrega `<link rel="canonical">` en las dos páginas |
 | Publicación | Netlify con tu cuenta (te guío). Antes, quitar o resolver los marcadores |
 | Wix viejo | Decidir si se redirige o se despublica cuando el nuevo esté en línea |
