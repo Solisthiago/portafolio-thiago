@@ -68,6 +68,20 @@
     }), { once: true });
   });
 
+  // Clics en WhatsApp, correo y LinkedIn: se cuentan en GoatCounter como «clic-whatsapp-contacto», «clic-correo-p-macparts»…
+  safe(() => {
+    d.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href]');
+      if (!a) return;
+      const h = a.getAttribute('href');
+      const tipo = h.includes('wa.me') ? 'whatsapp' : h.startsWith('mailto:') ? 'correo' : h.includes('linkedin.com') ? 'linkedin' : '';
+      if (!tipo || !window.goatcounter || !window.goatcounter.count) return;
+      const zona = a.closest('[data-nav]') ? 'menu' : (a.closest('[id]') || {}).id || 'barra-fija';
+      const idioma = d.documentElement.lang === 'en' ? '-en' : '';
+      window.goatcounter.count({ path: `clic-${tipo}-${zona}${idioma}`, title: a.textContent.trim().slice(0, 60), event: true });
+    }, true);
+  });
+
   // Menú que se marca al bajar
   safe(() => {
     const nav = $('[data-nav]');

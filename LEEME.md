@@ -120,6 +120,8 @@ Con "Reducir movimiento" activado, o si el JavaScript falla, todo se ve completo
 
 El contador es GoatCounter (gratis y sin cookies, así que no hace falta aviso de cookies). Las visitas se ven en https://solisthiago.goatcounter.com con tu usuario. El código está al final de `index.html` y `en/index.html`; las visitas desde tu computador en `localhost` no se cuentan.
 
+También se cuentan los clics en WhatsApp, correo y LinkedIn. En el panel salen como eventos con nombres así: `clic-whatsapp-contacto` (botón del final), `clic-whatsapp-inicio` (portada), `clic-whatsapp-menu` (menú), `clic-whatsapp-p-macparts` (el «Quiero algo así» de un proyecto), `clic-correo-…`, `clic-linkedin-…`. Los de la versión en inglés terminan en `-en`.
+
 ## Contacto en el sitio
 
 - WhatsApp: +57 300 519 8202 (botones con mensaje según el lugar)
