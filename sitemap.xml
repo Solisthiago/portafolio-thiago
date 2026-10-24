@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://solisthiago.github.io/portafolio-thiago/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://solisthiago.github.io/portafolio-thiago/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solisthiago.github.io/portafolio-thiago/en/"/>
+  </url>
+  <url>
+    <loc>https://solisthiago.github.io/portafolio-thiago/en/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://solisthiago.github.io/portafolio-thiago/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solisthiago.github.io/portafolio-thiago/en/"/>
+  </url>
+</urlset>

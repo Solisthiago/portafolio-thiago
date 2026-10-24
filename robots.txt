@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://solisthiago.github.io/portafolio-thiago/sitemap.xml
