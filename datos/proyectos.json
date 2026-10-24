@@ -485,24 +485,51 @@
         "Proyecto de Núcleo profesional I en la UPB."
       ],
       "rol": "Diseño editorial",
-      "equipo": "Isabella Villegas, Ana Martínez, Santiago Chavarro y Santiago Solís",
+      "equipo": "Santiago Solís",
       "herramientas": "InDesign, Illustrator, Photoshop, Lightroom",
       "imagenes": [
         [
-          "1",
-          "Revista Arquey abierta"
+          "v1",
+          "La revista completa: portada, páginas y acercamientos a las infografías",
+          "video",
+          1200,
+          674
         ],
         [
-          "2",
-          "Portada de la revista Arquey"
+          "m1",
+          "Portada de Arquey, mayo de 2024"
         ],
         [
-          "3",
-          "Doble página de la revista"
+          "m2",
+          "Ilustración de consolas a doble página"
         ],
         [
-          "4",
-          "Revista Arquey en mockup"
+          "m3",
+          "Pokémon Esmeralda y Pokémon Platino"
+        ],
+        [
+          "m4",
+          "Infografía: anatomía de la Nintendo 64"
+        ],
+        [
+          "m5",
+          "Estadística: juegos más vendidos de la N64"
+        ],
+        [
+          "m6",
+          "Línea de tiempo: de la Super Nintendo a la Switch"
+        ],
+        [
+          "m7",
+          "Encuesta: ¿los videojuegos causan violencia?"
+        ],
+        [
+          "m8",
+          "Doble página de la Nintendo 64"
+        ],
+        [
+          "m9",
+          "Ocarina of Time y la contraportada"
         ]
       ],
       "en": {
@@ -512,12 +539,18 @@
           "Professional Core I project at UPB."
         ],
         "rol": "Editorial design",
-        "equipo": "Isabella Villegas, Ana Martínez, Santiago Chavarro and Santiago Solís",
+        "equipo": "Santiago Solís",
         "alts": [
-          "Arquey magazine open",
-          "Arquey magazine cover",
-          "Magazine spread",
-          "Arquey magazine mockup"
+          "The whole magazine: cover, pages and close-ups of the infographics",
+          "Arquey cover, May 2024",
+          "Two-page console illustration",
+          "Pokémon Emerald and Pokémon Platinum",
+          "Infographic: Nintendo 64 anatomy",
+          "Chart: best-selling N64 games",
+          "Timeline: from the Super Nintendo to the Switch",
+          "Survey: do video games cause violence?",
+          "Nintendo 64 spread",
+          "Ocarina of Time and the back cover"
         ]
       }
     },
