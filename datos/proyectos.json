@@ -377,15 +377,15 @@
       "herramientas": "InDesign, Illustrator, Photoshop",
       "imagenes": [
         [
-          "1",
-          "Revista R.A.P. abierta en el artículo de Oblivion Mighty Trash"
-        ],
-        [
           "v1",
           "El libro completo pasando páginas: 16 páginas en un mockup animado",
           "video",
           1200,
           674
+        ],
+        [
+          "1",
+          "Revista R.A.P. abierta en el artículo de Oblivion Mighty Trash"
         ],
         [
           "2",
@@ -409,8 +409,8 @@
         "rol": "Editorial design",
         "equipo": "Santiago Solís",
         "alts": [
-          "R.A.P. magazine open on the Oblivion Mighty Trash feature",
           "The whole 16-page book flipping through its pages in an animated mockup",
+          "R.A.P. magazine open on the Oblivion Mighty Trash feature",
           "Magazine spread",
           "Page about Granuja",
           "Page about Luis7Lunes"

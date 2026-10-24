@@ -138,7 +138,8 @@ class Pagina:
         """Video corto sin sonido que se repite: entradas ["v1", "texto", "video", ancho, alto]."""
         base = f'{self.t["raiz"]}img/proyectos/{p["clave"]}-{a[0]}'
         w, h = a[3], a[4]
-        return (f'            <figure class="video"><video src="{base}.mp4" poster="{base}.webp" width="{w}" height="{h}" '
+        clase = "video ancho" if w > h * 1.3 else "video"  # los horizontales van más grandes
+        return (f'            <figure class="{clase}"><video src="{base}.mp4" poster="{base}.webp" width="{w}" height="{h}" '
                 f'muted loop playsinline preload="none" controls data-auto aria-label="{esc(alt)}"></video>'
                 f'<figcaption>{esc(alt)}</figcaption></figure>')
 
@@ -165,8 +166,9 @@ class Pagina:
     def fila(self, p, i):
         t = self.t
         portada = ""
-        if p["imagenes"]:
-            a = p["imagenes"][0]
+        fotos = [a for a in p["imagenes"] if not (len(a) > 2 and a[2] == "video")]
+        if fotos:  # la vista previa usa la primera imagen, aunque la galería empiece con un video
+            a = fotos[0]
             portada = self.imagen(p, a[0], a[2] if len(a) > 2 else None)[0]
         figuras = []
         for k, a in enumerate(p["imagenes"]):

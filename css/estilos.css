@@ -216,6 +216,7 @@ html.lenis,html.lenis body{height:auto}
 .galeria figure.vertical{width:min(58vw,360px)}
 .galeria img,.galeria video{display:block;width:100%;height:auto;border-radius:var(--r-sm);background:var(--line)}
 .galeria figure.video{width:min(70vw,420px)}
+.galeria figure.video.ancho{width:min(88vw,900px)}
 .galeria figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
 .sin-imagenes{border:2px dashed var(--line);border-radius:var(--r-lg);padding:28px;text-align:center;color:var(--muted)}
 .vista-previa{position:fixed;left:0;top:0;width:280px;aspect-ratio:4/3;border-radius:var(--r-lg);overflow:hidden;pointer-events:none;z-index:40;opacity:0;scale:.85;
