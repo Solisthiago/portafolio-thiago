@@ -262,9 +262,11 @@
 
     // Cierre: la cursiva se escribe y THIAGO vuelve a salir del piso
     const sp = $('[data-script-pie]');
-    if (sp) safe(() => gsap.fromTo(sp, { clipPath: 'inset(-40% 100% -60% -20%)' }, { clipPath: 'inset(-40% -20% -60% -20%)', duration: 1.0, ease: 'power2.inOut', scrollTrigger: { trigger: sp, start: 'top 85%', toggleActions: 'play none none none' } }));
+    if (sp) safe(() => gsap.fromTo(sp, { clipPath: 'inset(-40% 100% -60% -20%)' }, { clipPath: 'inset(-40% -20% -60% -20%)', duration: 0.8, ease: 'power2.inOut', scrollTrigger: { trigger: sp, start: 'top bottom-=40', toggleActions: 'play none none none' } }));
     const fp = $('[data-firma-pie]');
-    if (fp) safe(() => gsap.from($$('span', fp), { yPercent: 105, duration: 0.9, stagger: 0.06, ease: 'power3.out', scrollTrigger: { trigger: fp, start: 'top 95%', toggleActions: 'play none none none' } }));
+    if (fp) safe(() => gsap.from($$('span', fp), { yPercent: 105, duration: 0.9, stagger: 0.06, ease: 'power3.out', scrollTrigger: { trigger: fp, start: 'top bottom', toggleActions: 'play none none none' } }));
+    // si se llega al final sin haber pasado por el disparador (página corta, salto con #), las letras igual suben
+    if (fp) window.addEventListener('scroll', () => { if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) gsap.to($$('span', fp), { yPercent: 0, duration: 0.6, overwrite: 'auto' }); }, { passive: true });
 
     // Rescate: si algo ya está en pantalla y sigue escondido al detener el scroll, se muestra
     const pendientes = new Set($$('[data-reveal], [data-fila], [data-split], [data-caso]'));
