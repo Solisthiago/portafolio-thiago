@@ -1,0 +1,59 @@
+/* Estilos del portafolio en PDF: misma dirección de arte de la web ("Bloque y firma") */
+@font-face{font-family:"Archivo";src:url({{FUENTES}}/archivo-var-latin.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%}
+@font-face{font-family:"Mr Dafoe";src:url({{FUENTES}}/mr-dafoe-latin.woff2) format("woff2")}
+@page{size:297mm 210mm;margin:0}
+:root{--ink:#043222;--ink-deep:#021A12;--bg:#F6E9D9;--surface:#FBF4EA;--line:#E2D2BD;--muted:#4F5E55;--acc:#6A2CF5;--acc-dark:#A98BFF;--marcador:#FFE45C}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:"Archivo",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pagina{position:relative;width:297mm;height:209.9mm;padding:52px 56px;overflow:hidden;page-break-after:always;break-after:page;background:var(--bg)}
+.pie{position:absolute;left:56px;right:56px;bottom:22px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.etiqueta{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:10px}
+.etiqueta::before{content:"";width:7px;height:7px;background:var(--acc);rotate:45deg}
+.indice-pag .titulo{font-size:64px}
+.titulo{font-weight:900;font-stretch:80%;text-transform:uppercase;font-size:46px;line-height:.92;letter-spacing:-.01em;margin:14px 0 16px}
+.firma{font-family:"Mr Dafoe",cursive;text-transform:none;font-weight:400;color:var(--acc);font-size:1.15em;letter-spacing:0}
+p{font-size:12.5px;line-height:1.55;margin-bottom:9px}
+.datos{display:grid;grid-template-columns:96px 1fr;gap:7px 12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;line-height:1.45}
+.datos dt{font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:9.5px;padding-top:1px}
+
+/* Portada */
+.portada{background:var(--ink);color:var(--bg);padding:56px 64px}
+.portada__arriba{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-dark);font-weight:700}
+.portada__nombre{position:absolute;left:58px;bottom:170px;display:flex;flex-direction:column;line-height:.82}
+.portada__nombre .espaciado{font-size:34px;font-weight:700;letter-spacing:.9em;color:var(--acc-dark);margin:0 0 18px 6px}
+.portada__nombre b{font-size:210px;font-weight:900;font-stretch:72%;letter-spacing:-.02em}
+.portada__lema{position:absolute;left:64px;bottom:96px;font-size:26px;font-weight:300;font-stretch:90%}
+.portada__lema em{font-family:"Mr Dafoe",cursive;font-style:normal;color:var(--acc-dark);font-size:1.5em}
+.portada__pie{position:absolute;left:64px;bottom:44px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,233,217,.6)}
+.portada__iso{position:absolute;right:64px;bottom:52px;width:150px;opacity:.95}
+
+/* Sobre mí */
+.sobre{display:grid;grid-template-columns:400px 1fr;gap:52px;align-items:center}
+.sobre__foto{width:400px;height:640px;object-fit:cover;border-radius:6px}
+.grande{font-size:17px;line-height:1.45;font-weight:500}
+
+/* Índice */
+.indice{list-style:none;columns:2;column-gap:56px;margin-top:20px}
+.indice li{display:grid;grid-template-columns:40px 1fr auto;grid-template-rows:auto auto;column-gap:10px;row-gap:4px;padding:22px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.indice .n{grid-row:span 2;font-weight:800;color:var(--acc);font-size:13px}
+.indice .nom{font-weight:800;font-stretch:85%;text-transform:uppercase;font-size:24px}
+.indice .pag{grid-row:span 2;font-weight:700;font-size:13px;color:var(--muted)}
+.indice .dis{font-size:12px;color:var(--muted)}
+
+/* Proyecto */
+.proyecto{display:grid;grid-template-columns:330px 1fr;gap:40px}
+.ficha{display:flex;flex-direction:column;justify-content:center}
+.resumen{font-size:15px;font-weight:600;line-height:1.35;margin-bottom:12px}
+.galeria{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px}
+.fila{display:flex;gap:12px}
+.fila img{display:block;border-radius:4px;object-fit:cover;background:var(--surface)}
+.galeria-pag .cab{margin-bottom:22px}
+
+/* Contacto */
+.contacto{background:var(--ink);color:var(--bg);padding:64px}
+.contacto .etiqueta{color:var(--acc-dark)}.contacto .etiqueta::before{background:var(--acc-dark)}
+.contacto__titulo{font-weight:900;font-stretch:76%;text-transform:uppercase;font-size:96px;line-height:.9;margin:22px 0 50px;max-width:800px}
+.contacto .firma{color:var(--acc-dark)}
+.vias{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:22px 48px;max-width:760px;font-size:17px}
+.vias b{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-dark);margin-bottom:4px}
+.contacto__iso{position:absolute;right:64px;bottom:60px;width:130px}
