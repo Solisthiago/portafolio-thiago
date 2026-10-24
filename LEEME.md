@@ -122,6 +122,10 @@ El contador es GoatCounter (gratis y sin cookies, así que no hace falta aviso d
 
 También se cuentan los clics en WhatsApp, correo y LinkedIn. En el panel salen como eventos con nombres así: `clic-whatsapp-contacto` (botón del final), `clic-whatsapp-inicio` (portada), `clic-whatsapp-menu` (menú), `clic-whatsapp-p-macparts` (el «Quiero algo así» de un proyecto), `clic-correo-…`, `clic-linkedin-…`. Los de la versión en inglés terminan en `-en`.
 
+## Google
+
+El sitio está verificado en Google Search Console (https://search.google.com/search-console, con santiagomezsolis@gmail.com) con la etiqueta `google-site-verification` de `index.html` y `en/index.html`: **no la borres**. El `sitemap.xml` lista las dos versiones del sitio; si agregas páginas nuevas, súmalas ahí y cambia la fecha `lastmod`.
+
 ## Contacto en el sitio
 
 - WhatsApp: +57 300 519 8202 (botones con mensaje según el lugar)
