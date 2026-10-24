@@ -116,6 +116,10 @@ CSS: `--ease: cubic-bezier(.22,1,.36,1)`, `--ease-io: cubic-bezier(.76,0,.24,1)`
 
 Con "Reducir movimiento" activado, o si el JavaScript falla, todo se ve completo y quieto. Si una pieza en pantalla sigue escondida al detener el scroll, se muestra sola (rescate).
 
+## Visitas
+
+El contador es GoatCounter (gratis y sin cookies, así que no hace falta aviso de cookies). Las visitas se ven en https://solisthiago.goatcounter.com con tu usuario. El código está al final de `index.html` y `en/index.html`; las visitas desde tu computador en `localhost` no se cuentan.
+
 ## Contacto en el sitio
 
 - WhatsApp: +57 300 519 8202 (botones con mensaje según el lugar)
